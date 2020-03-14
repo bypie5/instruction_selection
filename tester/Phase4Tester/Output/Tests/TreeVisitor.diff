@@ -1,0 +1,111 @@
+--- SelfTestCases/TreeVisitor.out	2011-04-28 14:55:21.000000000 -0700
++++ ./Output/Tests/TreeVisitor.out	2020-03-13 21:48:07.000000000 -0700
+@@ -1,44 +1,65 @@
+-16
+-100000000
+-4
+-8
+-12
+-14
+-16
+-20
+-24
+-28
+-100000000
+-50000000
+-333
+-333
+-333
+-28
+-24
+-333
+-20
+-16
+-333
+-333
+-333
+-14
+-12
+-8
+-333
+-4
+-100000000
+-1
+-1
+-1
+-0
+-1
+-4
+-8
+-14
+-16
+-20
+-24
+-28
+-0
+-0
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 57 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 82 column 10: "100000000": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 155 column 10: "100000000": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 163 column 10: "50000000": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 174 column 10: "100000000": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 273 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 286 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 295 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 325 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 348 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 357 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 367 column 14: "$t1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 372 column 14: "$t2": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 373 column 10: "1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 386 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 388 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 390 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 392 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 424 column 14: "$t0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 522 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 524 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 526 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 528 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 530 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 532 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 534 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 554 column 14: "$t0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 582 column 14: "$s1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 620 column 10: "1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 631 column 10: "1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 674 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 676 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 678 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 805 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 807 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 809 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 811 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 894 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 896 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 898 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 900 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 983 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 985 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 987 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 989 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1007 column 14: "$t0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1034 column 14: "$s0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1088 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1090 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1092 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1171 column 10: "333": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1187 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1189 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1212 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1246 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1268 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1270 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1293 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 1338 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 2 column 1: Symbol "vmt_TV" not found in symbol table.
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 4 column 1: Symbol "vmt_Tree" not found in symbol table.
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 26 column 1: Symbol "vmt_Visitor" not found in symbol table.
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/TreeVisitor.compiler.out line 28 column 1: Symbol "vmt_MyVisitor" not found in symbol table.
+ 
++Processing terminated due to errors.

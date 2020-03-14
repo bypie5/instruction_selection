@@ -1,0 +1,44 @@
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 27 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 36 column 10: "99999": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 51 column 10: "0": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 53 column 14: "$t1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 58 column 14: "$t4": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 67 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 81 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 89 column 14: "$t6": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 98 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 112 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 125 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 133 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 141 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 148 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 168 column 14: "$t2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 176 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 194 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 198 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 203 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 211 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 216 column 9: "0": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 226 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 231 column 9: "1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 241 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 246 column 9: "2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 256 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 261 column 9: "3": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 271 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 276 column 9: "4": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 286 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 291 column 9: "5": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 301 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 306 column 9: "6": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 316 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 321 column 9: "7": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 331 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 336 column 9: "8": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 346 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 351 column 9: "9": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 364 column 8: "$t1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 367 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BubbleSort.opt.compiler.out line 2 column 1: Symbol "empty_BBS" not found in symbol table.
+
+Processing terminated due to errors.

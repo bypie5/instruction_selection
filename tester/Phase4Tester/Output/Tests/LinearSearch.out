@@ -1,0 +1,21 @@
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 35 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 48 column 10: "9999": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 92 column 14: "$t2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 100 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 124 column 14: "$t4": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 132 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 141 column 14: "$t1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 145 column 14: "$t4": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 146 column 10: "1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 162 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 166 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 171 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 178 column 14: "$t2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 180 column 9: "2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 188 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 196 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 211 column 8: "$t1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 214 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 2 column 1: Symbol "vmt_LS" not found in symbol table.
+
+Processing terminated due to errors.
