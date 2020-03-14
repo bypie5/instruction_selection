@@ -1,5 +1,5 @@
 .data
-empty_Fac
+empty_Fac:
 
 .text
 jal Main
@@ -7,18 +7,28 @@ li $v0 10
 syscall
 
 Main:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 li $a0 :empty_Fac
 li $a1 10
 
 move $t0 $v0
 move $a0 $t0
 jal _print
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 Fac.ComputeFac:
-la $t9 $s0
-sw $t9 0($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 12
+sw $ra -4($fp)
+sw $s0 0($sp)
 move $t0 $a0
 move $s0 $a1
 slti $t1 $s0 1
@@ -35,7 +45,10 @@ mul $t1 $s0 $t2
 if1_end:
 move $v0 $t1
 lw $s0 0($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 12
+jr $ra
 
 
 

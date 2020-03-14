@@ -1,9 +1,7 @@
 --- SelfTestCases/Factorial.opt.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/Factorial.opt.out	2020-03-13 21:47:58.000000000 -0700
-@@ -1,2 +1,5 @@
++++ ./Output/Tests/Factorial.opt.out	2020-03-14 14:27:20.000000000 -0700
+@@ -1,2 +1,3 @@
 -3628800
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/Factorial.opt.compiler.out line 10 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/Factorial.opt.compiler.out line 20 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/Factorial.opt.compiler.out line 2 column 1: Symbol "empty_Fac" not found in symbol table.
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/Factorial.opt.compiler.out line 14 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
  
 +Processing terminated due to errors.

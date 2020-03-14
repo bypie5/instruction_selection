@@ -1,6 +1,4 @@
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/MoreThan4.compiler.out line 66 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/MoreThan4.compiler.out line 68 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/MoreThan4.compiler.out line 70 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/MoreThan4.compiler.out line 2 column 1: Symbol "vmt_MT4" not found in symbol table.
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/MoreThan4.compiler.out line 34: Runtime exception at 0x00400070: store address not aligned on word boundary 0x7fffefe9
 
 Processing terminated due to errors.
+

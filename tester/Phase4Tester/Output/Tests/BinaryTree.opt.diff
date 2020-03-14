@@ -1,6 +1,6 @@
 --- SelfTestCases/BinaryTree.opt.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/BinaryTree.opt.out	2020-03-13 21:47:54.000000000 -0700
-@@ -1,27 +1,46 @@
++++ ./Output/Tests/BinaryTree.opt.out	2020-03-14 14:27:17.000000000 -0700
+@@ -1,27 +1,11 @@
 -16
 -100000000
 -8
@@ -27,49 +27,14 @@
 -28
 -0
 -0
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 11 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 20 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 38 column 10: "100000000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 182 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 195 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 204 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 234 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 257 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 266 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 276 column 14: "$t1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 281 column 14: "$t2": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 294 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 296 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 298 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 300 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 325 column 14: "$t0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 407 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 409 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 411 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 413 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 415 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 417 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 419 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 437 column 14: "$t0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 461 column 14: "$s1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 535 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 537 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 539 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 642 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 644 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 646 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 714 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 716 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 718 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 786 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 788 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 790 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 792 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 808 column 14: "$t0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 831 column 14: "$s0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 879 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 881 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 2 column 1: Symbol "empty_BT" not found in symbol table.
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 3 column 1: Symbol "empty_Tree" not found in symbol table.
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 15 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 48 column 10: "100000000": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 364 column 14: "$t1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 369 column 14: "$t2": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 416 column 14: "$t0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 528 column 14: "$t0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 552 column 14: "$s1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 914 column 14: "$t0": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 937 column 14: "$s0": operand is of incorrect type
  
 +Processing terminated due to errors.

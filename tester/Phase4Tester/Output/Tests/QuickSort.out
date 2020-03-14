@@ -1,58 +1,44 @@
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 35 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 48 column 10: "9999": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 68 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 70 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 72 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 78 column 14: "$s1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 86 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 109 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 117 column 14: "$t3": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 118 column 10: "1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 137 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 145 column 14: "$t7": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 146 column 10: "1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 161 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 58 column 10: "9999": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 92 column 14: "$s1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 100 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 123 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 131 column 14: "$t3": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 132 column 10: "1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 151 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 159 column 14: "$t7": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 160 column 10: "1": operand is of incorrect type
 Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 175 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 188 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 196 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 204 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 211 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 214 column 14: "$t5": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 229 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 242 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 250 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 258 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 271 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 279 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 287 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 294 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 325 column 14: "$t2": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 333 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 351 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 355 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 360 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 368 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 373 column 9: "0": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 383 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 388 column 9: "1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 398 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 403 column 9: "2": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 413 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 418 column 9: "3": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 428 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 433 column 9: "4": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 443 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 448 column 9: "5": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 458 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 463 column 9: "6": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 473 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 478 column 9: "7": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 488 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 493 column 9: "8": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 503 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 508 column 9: "9": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 521 column 8: "$t1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 524 column 1: "la": Too few or incorrectly formatted operands. Expected: la $t1,($t2)
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 2 column 1: Symbol "vmt_QS" not found in symbol table.
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 189 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 202 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 217 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 226 column 14: "$t5": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 241 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 254 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 269 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 282 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 297 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 341 column 14: "$t2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 349 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 388 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 393 column 9: "0": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 403 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 408 column 9: "1": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 418 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 423 column 9: "2": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 433 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 438 column 9: "3": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 448 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 453 column 9: "4": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 463 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 468 column 9: "5": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 478 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 483 column 9: "6": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 493 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 498 column 9: "7": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 508 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 513 column 9: "8": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 523 column 1: "(" is not a recognized operator
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 528 column 9: "9": operand is of incorrect type
+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/QuickSort.compiler.out line 548 column 8: "$t1": operand is of incorrect type
 
 Processing terminated due to errors.

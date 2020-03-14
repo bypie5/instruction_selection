@@ -1,7 +1,7 @@
 .data
-empty_Element
-empty_List
-empty_LL
+empty_Element:
+empty_List:
+empty_LL:
 
 .text
 jal Main
@@ -9,57 +9,90 @@ li $v0 10
 syscall
 
 Main:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 li $a0 :empty_LL
 
 move $t0 $v0
 move $a0 $t0
 jal _print
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 Element.Init:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 move $t1 $a1
 move $t2 $a2
 move $t3 $a3
-la $t9 $t1
-sw $t9 0($t0)
-la $t9 $t2
-sw $t9 4($t0)
-la $t9 $t3
-sw $t9 8($t0)
+sw $t1 0($t0)
+sw $t2 4($t0)
+sw $t3 8($t0)
 li $v0 1
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 Element.GetAge:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t0 0($t0)
 move $v0 $t0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 Element.GetSalary:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t0 4($t0)
 move $v0 $t0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 Element.GetMarried:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t0 8($t0)
 move $v0 $t0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 Element.Equal:
-la $t9 $s0
-sw $t9 0($sp)
-la $t9 $s1
-sw $t9 1($sp)
-la $t9 $s2
-sw $t9 2($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 20
+sw $ra -4($fp)
+sw $s0 0($sp)
+sw $s1 1($sp)
+sw $s2 2($sp)
 move $s0 $a0
 move $s1 $a1
 li $s2 1
@@ -132,10 +165,17 @@ move $v0 $s2
 lw $s0 0($sp)
 lw $s1 1($sp)
 lw $s2 2($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 20
+jr $ra
 
 
 Element.Compare:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a1
 move $t1 $a2
 addu $t2 $t1 1
@@ -153,35 +193,52 @@ li $t1 1
 if7_end:
 if6_end:
 move $v0 $t1
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.Init:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 la $t9 1
 sw $t9 8($t0)
 li $v0 1
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.InitNew:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 move $t1 $a1
 move $t2 $a2
 move $t3 $a3
-la $t9 $t3
-sw $t9 8($t0)
-la $t9 $t1
-sw $t9 0($t0)
-la $t9 $t2
-sw $t9 4($t0)
+sw $t3 8($t0)
+sw $t1 0($t0)
+sw $t2 4($t0)
 li $v0 1
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.Insert:
-la $t9 $s0
-sw $t9 0($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 12
+sw $ra -4($fp)
+sw $s0 0($sp)
 move $t0 $a0
 move $t1 $a1
 move $t0 $t0
@@ -199,35 +256,40 @@ li $a3 0
 
 move $v0 $s0
 lw $s0 0($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 12
+jr $ra
 
 
 List.SetNext:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 move $t1 $a1
-la $t9 $t1
-sw $t9 4($t0)
+sw $t1 4($t0)
 li $v0 1
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.Delete:
-la $t9 $s0
-sw $t9 0($sp)
-la $t9 $s1
-sw $t9 1($sp)
-la $t9 $s2
-sw $t9 2($sp)
-la $t9 $s3
-sw $t9 3($sp)
-la $t9 $s4
-sw $t9 4($sp)
-la $t9 $s5
-sw $t9 5($sp)
-la $t9 $s6
-sw $t9 6($sp)
-la $t9 $s7
-sw $t9 7($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 40
+sw $ra -4($fp)
+sw $s0 0($sp)
+sw $s1 1($sp)
+sw $s2 2($sp)
+sw $s3 3($sp)
+sw $s4 4($sp)
+sw $s5 5($sp)
+sw $s6 6($sp)
+sw $s7 7($sp)
 move $t0 $a0
 move $s0 $a1
 move $s1 $t0
@@ -328,18 +390,21 @@ lw $s4 4($sp)
 lw $s5 5($sp)
 lw $s6 6($sp)
 lw $s7 7($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 40
+jr $ra
 
 
 List.Search:
-la $t9 $s0
-sw $t9 0($sp)
-la $t9 $s1
-sw $t9 1($sp)
-la $t9 $s2
-sw $t9 2($sp)
-la $t9 $s3
-sw $t9 3($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 24
+sw $ra -4($fp)
+sw $s0 0($sp)
+sw $s1 1($sp)
+sw $s2 2($sp)
+sw $s3 3($sp)
 move $t0 $a0
 move $s0 $a1
 li $s1 0
@@ -390,35 +455,61 @@ lw $s0 0($sp)
 lw $s1 1($sp)
 lw $s2 2($sp)
 lw $s3 3($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 24
+jr $ra
 
 
 List.GetEnd:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t0 8($t0)
 move $v0 $t0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.GetElem:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t0 0($t0)
 move $v0 $t0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.GetNext:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t0 4($t0)
 move $v0 $t0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 List.Print:
-la $t9 $s0
-sw $t9 0($sp)
-la $t9 $s1
-sw $t9 1($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 16
+sw $ra -4($fp)
+sw $s0 0($sp)
+sw $s1 1($sp)
 move $t0 $a0
 move $s0 $t0
 lw $s1 8($t0)
@@ -461,18 +552,21 @@ while3_end:
 li $v0 1
 lw $s0 0($sp)
 lw $s1 1($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 16
+jr $ra
 
 
 LL.Start:
-la $t9 $s0
-sw $t9 0($sp)
-la $t9 $s1
-sw $t9 1($sp)
-la $t9 $s2
-sw $t9 2($sp)
-la $t9 $s3
-sw $t9 3($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 24
+sw $ra -4($fp)
+sw $s0 0($sp)
+sw $s1 1($sp)
+sw $s2 2($sp)
+sw $s3 3($sp)
 li $a0 12
 jal _heapAlloc
 move $s0 $v0
@@ -677,7 +771,10 @@ lw $s0 0($sp)
 lw $s1 1($sp)
 lw $s2 2($sp)
 lw $s3 3($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 24
+jr $ra
 
 
 

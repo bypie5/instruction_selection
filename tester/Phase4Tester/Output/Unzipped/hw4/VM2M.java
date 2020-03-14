@@ -15,9 +15,10 @@ public class VM2M {
             // Translate the data section
             System.out.println(".data");
             for (int i = 0; i < tree.dataSegments.length; i++) {
-                System.out.println(tree.dataSegments[i].ident);
+                System.out.println(tree.dataSegments[i].ident + ":");
                 for (int j = 0; j < tree.dataSegments[i].values.length; j++) {
-                    System.out.println("    " + tree.dataSegments[i].values[j]);
+                    String label = tree.dataSegments[i].values[j].toString().replace(":","");
+                    System.out.println("    " + label);
                 }
             }
             System.out.println("");

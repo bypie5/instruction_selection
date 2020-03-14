@@ -10,6 +10,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
 
     VFunction currFunc;
     List<String> buffer;
+    int spSize;
 
     /*
         Interface functions
@@ -18,7 +19,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
     public void setData(VFunction currFunc) {
         this.currFunc = currFunc;
         buffer = new ArrayList<>();
-
+        spSize = (currFunc.stack.out * 4) + (currFunc.stack.local*4) + 8;
         for (int i = 0; i <= currFunc.body.length + currFunc.labels.length; i++) {
             buffer.add("");
         }
@@ -26,6 +27,15 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
 
     public void printBuffer() {
         insertLabels();
+
+        // on entry
+        String onEntry = "";
+        onEntry += "sw $fp -8($sp)\n";
+        onEntry += "move $fp $sp\n";
+        onEntry += "subu $sp $sp " + Integer.toString(spSize) + "\n";
+        onEntry += "sw $ra -4($fp)";
+
+        buffer.add(0, onEntry);
 
         for (String line : buffer) {
             System.out.println(line);
@@ -135,8 +145,13 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
             offset = Integer.toString(((VMemRef.Stack) w.dest).index);
         }
 
-        currLine += "la $t9 " + source + "\n";
-        currLine += "sw $t9 " + offset + "(" + dest + ")";
+        if (w.source instanceof VVarRef) {
+            currLine += "sw " + w.source.toString() + " " + offset + "(" + dest + ")";
+        } else {
+            currLine += "la $t9 " + source + "\n";
+            currLine += "sw $t9 " + offset + "(" + dest + ")";
+        }
+
 
         addLine(relPos, currLine);
     }
@@ -187,6 +202,17 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
     public void visit(VReturn r) throws E {
         String currLine = "";
         int relPos = getRelativePos(r.sourcePos.line);
+
+        if (r.value != null) {
+            currLine += "move $v0 " + r.value.toString() + "\n";
+        }
+
+        // on exit
+        currLine += "lw $ra -4($fp)\n";
+        currLine += "lw $fp -8($fp)\n";
+        currLine += "addu $sp $sp " + spSize + "\n";
+
+        currLine += "jr $ra";
 
         addLine(relPos, currLine);
     }

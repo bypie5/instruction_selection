@@ -1,5 +1,5 @@
 .data
-empty_BBS
+empty_BBS:
 
 .text
 jal Main
@@ -7,6 +7,10 @@ li $v0 10
 syscall
 
 Main:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 li $a0 8
 jal _heapAlloc
 move $t0 $v0
@@ -20,12 +24,18 @@ li $a1 10
 move $t0 $v0
 move $a0 $t0
 jal _print
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 BBS.Start:
-la $t9 $s0
-sw $t9 0($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 12
+sw $ra -4($fp)
+sw $s0 0($sp)
 move $s0 $a0
 move $t0 $a1
 move $a0 $s0
@@ -41,10 +51,17 @@ move $a0 $s0
 
 li $v0 0
 lw $s0 0($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 12
+jr $ra
 
 
 BBS.Sort:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 lw $t1 4($t0)
 subu $t1 $t1 1
@@ -130,8 +147,7 @@ bounds5:
 mul $t4 $t3 4
 addu $t4 $t4 $t6
 lw $t4 4($t4)
-la $t9 $t4
-sw $t9 4($t7)
+sw $t4 4($t7)
 lw $t4 0($t0)
 bnez $t4 null7
 la $a0 _str0
@@ -145,8 +161,7 @@ j _error
 bounds6:
 mul $t7 $t3 4
 addu $t7 $t7 $t4
-la $t9 $t5
-sw $t9 4($t7)
+sw $t5 4($t7)
 j if1_end
 if1_else:
 if1_end:
@@ -157,10 +172,17 @@ subu $t1 $t1 1
 j while1_top
 while1_end:
 li $v0 0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 BBS.Print:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 li $t1 0
 while3_top:
@@ -187,21 +209,25 @@ addu $t1 $t1 1
 j while3_top
 while3_end:
 li $v0 0
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 BBS.Init:
-la $t9 $s0
-sw $t9 0($sp)
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 12
+sw $ra -4($fp)
+sw $s0 0($sp)
 move $s0 $a0
 move $t0 $a1
-la $t9 $t0
-sw $t9 4($s0)
+sw $t0 4($s0)
 move $a0 $t0
 
 move $t0 $v0
-la $t9 $t0
-sw $t9 0($s0)
+sw $t0 0($s0)
 lw $t0 0($s0)
 bnez $t0 null9
 la $a0 _str0
@@ -354,20 +380,29 @@ la $t9 5
 sw $t9 4($t0)
 li $v0 0
 lw $s0 0($sp)
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 12
+jr $ra
 
 
 AllocArray:
+sw $fp -8($sp)
+move $fp $sp
+subu $sp $sp 8
+sw $ra -4($fp)
 move $t0 $a0
 mul $t1 $t0 4
 addu $t1 $t1 4
 li $a0 $t1
 jal _heapAlloc
 move $t1 $v0
-la $t9 $t0
-sw $t9 0($t1)
+sw $t0 0($t1)
 move $v0 $t1
-
+lw $ra -4($fp)
+lw $fp -8($fp)
+addu $sp $sp 8
+jr $ra
 
 
 
