@@ -32,7 +32,6 @@ public class VM2M {
             VaporVisitor<Exception> vaporVisitor = new VaporVisitor<>();
             for (int i = 0; i < tree.functions.length; i++) {
                 VFunction currFunction = tree.functions[i];
-
                 vaporVisitor.setData(currFunction);
 
                 // Translate function header
@@ -42,6 +41,8 @@ public class VM2M {
                 for (int j = 0; j < currFunction.body.length; j++) {
                     currFunction.body[j].accept(vaporVisitor);
                 }
+
+                vaporVisitor.printBuffer();
 
                 System.out.println(); // newline for readability
             }
