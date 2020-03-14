@@ -10,7 +10,6 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
 
     VFunction currFunc;
     List<String> buffer;
-    //int lineCount;
 
     /*
         Interface functions
@@ -64,7 +63,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         String destReg = a.dest.toString();
 
         if (a.source instanceof VVarRef) {
-            currLine += "mov " + destReg + " " + a.source.toString();
+            currLine += "move " + destReg + " " + a.source.toString();
         } else if (a.source instanceof VOperand.Static) {
             currLine += "li " + destReg + " " + a.source.toString();
         }
@@ -108,7 +107,8 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
                 break;
             case "HeapAllocZ":
                 currLine += "li $a0 " + c.args[0].toString() + "\n";
-                currLine += "jal _heapAlloc";
+                currLine += "jal _heapAlloc\n";
+                currLine += "move " + c.dest.toString() + " $v0";
                 break;
             case "Error":
                 currLine += "la $a0 _str0\n";
@@ -126,12 +126,40 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         String currLine = "";
         int relPos = getRelativePos(w.sourcePos.line);
 
+        String source = w.source.toString().replace(":", "");
+        String dest;
+        String offset = "0";
+        if (w.dest instanceof VMemRef.Global) {
+            dest = ((VMemRef.Global) w.dest).base.toString();
+            offset = Integer.toString(((VMemRef.Global) w.dest).byteOffset);
+        } else {
+            dest = "$sp";
+            offset = Integer.toString(((VMemRef.Stack) w.dest).index);
+        }
+
+        currLine += "la $t9 " + source + "\n";
+        currLine += "sw $t9 " + offset + "(" + dest + ")";
+
         addLine(relPos, currLine);
     }
 
     public void visit(VMemRead r) throws E {
         String currLine = "";
         int relPos = getRelativePos(r.sourcePos.line);
+
+        String source = "";
+        String offset = "0";
+
+        if (r.source instanceof VMemRef.Global) {
+            source = ((VMemRef.Global) r.source).base.toString();
+            offset = Integer.toString(((VMemRef.Global) r.source).byteOffset);
+        } else if (r.source instanceof VMemRef.Stack) {
+            // Stack
+            source = "$sp";
+            offset = Integer.toString(((VMemRef.Stack) r.source).index);
+        }
+
+        currLine += "lw " + r.dest.toString() + " " + offset + "(" + source + ")";
 
         addLine(relPos, currLine);
     }
@@ -140,12 +168,20 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         String currLine = "";
         int relPos = getRelativePos(b.sourcePos.line);
 
+        if (b.positive) {
+            currLine += "bnez " + b.value.toString() + " " + b.target.ident;
+        } else {
+            currLine += "beqz " + b.value.toString() + " " + b.target.ident;
+        }
+
         addLine(relPos, currLine);
     }
 
     public void visit(VGoto g) throws E {
         String currLine = "";
         int relPos = getRelativePos(g.sourcePos.line);
+
+        currLine += "j " + g.target.toString().substring(1);
 
         addLine(relPos, currLine);
     }
