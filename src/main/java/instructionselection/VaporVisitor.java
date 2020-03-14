@@ -22,8 +22,6 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         for (int i = 0; i <= currFunc.body.length + currFunc.labels.length; i++) {
             buffer.add("");
         }
-
-        //lineCount = 0;
     }
 
     public void printBuffer() {
