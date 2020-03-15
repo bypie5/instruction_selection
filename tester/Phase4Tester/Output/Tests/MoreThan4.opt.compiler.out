@@ -40,9 +40,9 @@ move $t0 $a0
 move $t1 $a1
 move $t2 $a2
 move $t3 $a3
-lw $t4 0($sp)
-lw $t5 4($sp)
-lw $t6 8($sp)
+lw $t4 0($fp)
+lw $t5 4($fp)
+lw $t6 8($fp)
 move $a0 $t1
 jal _print
 move $a0 $t2
@@ -79,9 +79,9 @@ sw $ra -4($fp)
 move $t0 $a1
 move $t1 $a2
 move $t2 $a3
-lw $t3 0($sp)
-lw $t4 4($sp)
-lw $t5 8($sp)
+lw $t3 0($fp)
+lw $t4 4($fp)
+lw $t5 8($fp)
 move $a0 $t0
 jal _print
 move $a0 $t1

@@ -19,7 +19,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
     public void setData(VFunction currFunc) {
         this.currFunc = currFunc;
         buffer = new ArrayList<>();
-        spSize = (currFunc.stack.out * 4) + (currFunc.stack.local*4) + 8;
+        spSize = (currFunc.stack.out * 4) + (currFunc.stack.local * 4) + 8;
         for (int i = 0; i <= currFunc.body.length + currFunc.labels.length; i++) {
             buffer.add("");
         }
@@ -32,7 +32,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         String onEntry = "";
         onEntry += "sw $fp -8($sp)\n";
         onEntry += "move $fp $sp\n";
-        onEntry += "subu $sp $sp " + Integer.toString(spSize) + "\n";
+        onEntry += "subu $sp $sp " + spSize + "\n";
         onEntry += "sw $ra -4($fp)";
 
         buffer.add(0, onEntry);
@@ -135,17 +135,9 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
                 }
                 break;
             case "MulS":
-                /*if (c.args[0] instanceof VOperand.Static && c.args[1] instanceof VOperand.Static) {
-                    currLine += "li $t9 " + c.args[0].toString() + "\n";
-                    currLine += "li $t8 " + c.args[1].toString() + "\n";
-                    currLine += "mul " + c.dest.toString() + " $t9 $t8";
-                } else */
                 if (c.args[0] instanceof VOperand.Static) {
                     currLine += "li $t9 " + c.args[0].toString() + "\n";
                     currLine += "mul " + c.dest.toString() + " $t9 " + c.args[1].toString();
-                /*} else if (c.args[1] instanceof VOperand.Static) {
-                    currLine += "li $t9 " + c.args[1].toString() + "\n";
-                    currLine += "mul " + c.dest.toString() + " " + c.args[1].toString() + " $t9\n";*/
                 } else {
                     currLine += "mul " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 }
@@ -191,7 +183,11 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
             offset = Integer.toString(((VMemRef.Global) w.dest).byteOffset);
         } else {
             dest = "$sp";
-            offset = Integer.toString(((VMemRef.Stack) w.dest).index * 4);
+            //if (((VMemRef.Stack) w.dest).region == VMemRef.Stack.Region.Out) {
+            offset = Integer.toString((((VMemRef.Stack) w.dest).index) * 4);
+            //} else {
+             //   offset = Integer.toString(((VMemRef.Stack) w.dest).index * 4);
+            //}
         }
 
         if (w.source instanceof VVarRef) {
@@ -217,7 +213,11 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
             offset = Integer.toString(((VMemRef.Global) r.source).byteOffset);
         } else if (r.source instanceof VMemRef.Stack) {
             // Stack
-            source = "$sp";
+            if (((VMemRef.Stack) r.source).region == VMemRef.Stack.Region.In) {
+                source = "$fp";
+            } else {
+                source = "$sp";
+            }
             offset = Integer.toString(((VMemRef.Stack) r.source).index * 4);
         }
 
