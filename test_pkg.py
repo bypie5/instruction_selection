@@ -44,7 +44,7 @@ for p in pkgs:
 
 # Clean up source files
 # Remove this specific text from all files:
-text_to_remove = []
+text_to_remove = ['package instructionselection;']
 for file in os.listdir(dest):
 	filename = os.path.join(dest, file)
 	with open(filename, "r") as f:
@@ -64,7 +64,7 @@ output, error = process.communicate()
 
 print("Error: " + str(error))
 
-bashCommand = "cp hw4.tgz ../tester/Phase3Tester"
+bashCommand = "cp hw4.tgz ../tester/Phase4Tester"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE, cwd='./out')
 output, error = process.communicate()
 
