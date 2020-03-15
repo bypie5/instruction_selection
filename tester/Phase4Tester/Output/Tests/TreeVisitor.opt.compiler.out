@@ -49,7 +49,7 @@ j _error
 null2:
 move $a0 $s0
 
-move $a0 100000000
+li $a0 100000000
 jal _print
 bnez $s0 null3
 la $a0 _str0
@@ -106,7 +106,7 @@ j _error
 null10:
 move $a0 $s0
 
-move $a0 100000000
+li $a0 100000000
 jal _print
 li $a0 12
 jal _heapAlloc
@@ -114,7 +114,7 @@ move $t0 $v0
 la $t9 vmt_MyVisitor
 sw $t9 0($t0)
 move $t0 $t0
-move $a0 50000000
+li $a0 50000000
 jal _print
 bnez $s0 null11
 la $a0 _str0
@@ -123,7 +123,7 @@ null11:
 move $a0 $s0
 move $a1 $t0
 
-move $a0 100000000
+li $a0 100000000
 jal _print
 bnez $s0 null12
 la $a0 _str0
@@ -378,12 +378,12 @@ sw $ra -4($fp)
 move $t0 $a1
 move $t1 $a2
 addu $t2 $t1 1
-slti $t1 $t0 $t1
+slt $t1 $t0 $t1
 beqz $t1 if1_else
 li $t1 0
 j if1_end
 if1_else:
-slti $t2 $t0 $t2
+slt $t2 $t0 $t2
 bnez $t2 if2_else
 li $t1 0
 j if2_end
@@ -404,9 +404,9 @@ move $fp $sp
 subu $sp $sp 24
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
-sw $s3 3($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
+sw $s3 12($sp)
 move $s0 $a0
 move $s1 $a1
 li $a0 24
@@ -430,7 +430,7 @@ null21:
 move $a0 $s0
 
 move $t0 $v0
-slti $t0 $s1 $t0
+slt $t0 $s1 $t0
 beqz $t0 if3_else
 bnez $s0 null22
 la $a0 _str0
@@ -505,9 +505,9 @@ j while1_top
 while1_end:
 li $v0 1
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
-lw $s3 3($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
+lw $s3 12($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 24
@@ -520,12 +520,12 @@ move $fp $sp
 subu $sp $sp 36
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
-sw $s3 3($sp)
-sw $s4 4($sp)
-sw $s5 5($sp)
-sw $s6 6($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
+sw $s3 12($sp)
+sw $s4 16($sp)
+sw $s5 20($sp)
+sw $s6 24($sp)
 move $s0 $a0
 move $s1 $a1
 move $s2 $s0
@@ -542,7 +542,7 @@ null30:
 move $a0 $s2
 
 move $t0 $v0
-slti $t1 $s1 $t0
+slt $t1 $s1 $t0
 beqz $t1 if6_else
 bnez $s2 null31
 la $a0 _str0
@@ -566,7 +566,7 @@ li $s4 0
 if7_end:
 j if6_end
 if6_else:
-slti $t0 $t0 $s1
+slt $t0 $t0 $s1
 beqz $t0 if8_else
 bnez $s2 null33
 la $a0 _str0
@@ -630,12 +630,12 @@ j while2_top
 while2_end:
 move $v0 $s5
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
-lw $s3 3($sp)
-lw $s4 4($sp)
-lw $s5 5($sp)
-lw $s6 6($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
+lw $s3 12($sp)
+lw $s4 16($sp)
+lw $s5 20($sp)
+lw $s6 24($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 36
@@ -648,8 +648,8 @@ move $fp $sp
 subu $sp $sp 20
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
 move $s0 $a0
 move $s1 $a1
 move $s2 $a2
@@ -745,8 +745,8 @@ if13_end:
 if12_end:
 li $v0 1
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 20
@@ -759,8 +759,8 @@ move $fp $sp
 subu $sp $sp 20
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
 move $s0 $a0
 move $s1 $a1
 move $s2 $a2
@@ -821,8 +821,8 @@ li $a1 0
 
 li $v0 1
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 20
@@ -835,8 +835,8 @@ move $fp $sp
 subu $sp $sp 20
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
 move $s0 $a0
 move $s1 $a1
 move $s2 $a2
@@ -897,8 +897,8 @@ li $a1 0
 
 li $v0 1
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 20
@@ -911,9 +911,9 @@ move $fp $sp
 subu $sp $sp 24
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
-sw $s3 3($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
+sw $s3 12($sp)
 move $t0 $a0
 move $s0 $a1
 move $s1 $t0
@@ -928,7 +928,7 @@ null60:
 move $a0 $s1
 
 move $t0 $v0
-slti $t1 $s0 $t0
+slt $t1 $s0 $t0
 beqz $t1 if15_else
 bnez $s1 null61
 la $a0 _str0
@@ -951,7 +951,7 @@ li $s2 0
 if16_end:
 j if15_end
 if15_else:
-slti $t0 $t0 $s0
+slt $t0 $t0 $s0
 beqz $t0 if17_else
 bnez $s1 null63
 la $a0 _str0
@@ -982,9 +982,9 @@ j while5_top
 while5_end:
 move $v0 $s3
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
-lw $s3 3($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
+lw $s3 12($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 24
@@ -1014,7 +1014,7 @@ move $fp $sp
 subu $sp $sp 16
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
+sw $s1 4($sp)
 move $s0 $a0
 move $s1 $a1
 bnez $s1 null65
@@ -1070,7 +1070,7 @@ if20_else:
 if20_end:
 li $v0 1
 lw $s0 0($sp)
-lw $s1 1($sp)
+lw $s1 4($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 16
@@ -1084,7 +1084,7 @@ subu $sp $sp 8
 sw $ra -4($fp)
 move $t0 $a0
 move $t1 $a1
-move $a0 333
+li $a0 333
 jal _print
 bnez $t1 null70
 la $a0 _str0
@@ -1108,7 +1108,7 @@ move $fp $sp
 subu $sp $sp 16
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
+sw $s1 4($sp)
 move $s0 $a0
 move $s1 $a1
 bnez $s1 null71
@@ -1167,7 +1167,7 @@ if22_else:
 if22_end:
 li $v0 0
 lw $s0 0($sp)
-lw $s1 1($sp)
+lw $s1 4($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 16
@@ -1180,7 +1180,7 @@ move $fp $sp
 subu $sp $sp 16
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
+sw $s1 4($sp)
 move $s0 $a0
 move $s1 $a1
 bnez $s1 null77
@@ -1248,7 +1248,7 @@ if24_else:
 if24_end:
 li $v0 0
 lw $s0 0($sp)
-lw $s1 1($sp)
+lw $s1 4($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 16

@@ -31,9 +31,9 @@ li $a3 3
 la $t9 4
 sw $t9 0($sp)
 la $t9 5
-sw $t9 1($sp)
+sw $t9 4($sp)
 la $t9 6
-sw $t9 2($sp)
+sw $t9 8($sp)
 jalr $t1
 move $t1 $v0
 move $a0 $t1
@@ -54,8 +54,8 @@ move $t1 $a1
 move $t2 $a2
 move $t3 $a3
 lw $t4 0($sp)
-lw $t5 1($sp)
-lw $t6 2($sp)
+lw $t5 4($sp)
+lw $t6 8($sp)
 move $a0 $t1
 jal _print
 move $a0 $t2
@@ -75,8 +75,8 @@ move $a1 $t6
 move $a2 $t5
 move $a3 $t4
 sw $t3 0($sp)
-sw $t2 1($sp)
-sw $t1 2($sp)
+sw $t2 4($sp)
+sw $t1 8($sp)
 jalr $t7
 move $t7 $v0
 move $v0 $t7
@@ -95,8 +95,8 @@ move $t0 $a1
 move $t1 $a2
 move $t2 $a3
 lw $t3 0($sp)
-lw $t4 1($sp)
-lw $t5 2($sp)
+lw $t4 4($sp)
+lw $t5 8($sp)
 move $a0 $t0
 jal _print
 move $a0 $t1

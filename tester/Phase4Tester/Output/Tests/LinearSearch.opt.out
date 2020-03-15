@@ -1,11 +1,5 @@
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 46 column 10: "9999": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 89 column 14: "$t2": operand is of incorrect type
 Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 97 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 128 column 14: "$t4": operand is of incorrect type
 Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 136 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 145 column 14: "$t1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 149 column 14: "$t4": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 185 column 14: "$t2": operand is of incorrect type
 Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 187 column 9: "2": operand is of incorrect type
 Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 195 column 1: "(" is not a recognized operator
 Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.opt.compiler.out line 224 column 8: "$t1": operand is of incorrect type

@@ -1,13 +1,27 @@
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 87 column 10: "100000000": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 437 column 14: "$t1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 442 column 14: "$t2": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 443 column 10: "1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 497 column 14: "$t0": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 627 column 14: "$t0": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 655 column 14: "$s1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 693 column 10: "1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 704 column 10: "1": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 1093 column 14: "$t0": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.compiler.out line 1120 column 14: "$s0": operand is of incorrect type
+16
+100000000
+8
+16
+4
+8
+12
+14
+16
+20
+24
+28
+1
+1
+1
+0
+1
+4
+8
+14
+16
+20
+24
+28
+0
+0
 
-Processing terminated due to errors.

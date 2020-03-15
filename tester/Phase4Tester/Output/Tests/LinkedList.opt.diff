@@ -1,6 +1,6 @@
 --- SelfTestCases/LinkedList.opt.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/LinkedList.opt.out	2020-03-14 14:27:26.000000000 -0700
-@@ -1,27 +1,17 @@
++++ ./Output/Tests/LinkedList.opt.out	2020-03-14 18:57:59.000000000 -0700
+@@ -1,27 +1,6 @@
 -25
 -10000000
 -39
@@ -28,19 +28,8 @@
 -44440000
 -0
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 16 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 182 column 14: "$t1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 187 column 14: "$t2": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 297 column 10: "0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 304 column 10: "1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 331 column 10: "0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 348 column 10: "0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 415 column 10: "1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 518 column 10: "1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 618 column 10: "10000000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 647 column 10: "10000000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 707 column 10: "10000000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 735 column 10: "2220000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 751 column 10: "33300000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 767 column 10: "44440000": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 297 column 10: "1": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 331 column 10: "555": operand is of incorrect type
++Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinkedList.opt.compiler.out line 348 column 10: "555": operand is of incorrect type
  
 +Processing terminated due to errors.

@@ -1,6 +1,6 @@
 --- SelfTestCases/BinaryTree.opt.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/BinaryTree.opt.out	2020-03-14 14:27:17.000000000 -0700
-@@ -1,27 +1,11 @@
++++ ./Output/Tests/BinaryTree.opt.out	2020-03-14 18:57:48.000000000 -0700
+@@ -1,27 +1,3 @@
 -16
 -100000000
 -8
@@ -28,13 +28,5 @@
 -0
 -0
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 15 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 48 column 10: "100000000": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 364 column 14: "$t1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 369 column 14: "$t2": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 416 column 14: "$t0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 528 column 14: "$t0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 552 column 14: "$s1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 914 column 14: "$t0": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/BinaryTree.opt.compiler.out line 937 column 14: "$s0": operand is of incorrect type
  
 +Processing terminated due to errors.

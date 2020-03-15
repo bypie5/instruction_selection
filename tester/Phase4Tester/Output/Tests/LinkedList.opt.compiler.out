@@ -91,8 +91,8 @@ move $fp $sp
 subu $sp $sp 20
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
 move $s0 $a0
 move $s1 $a1
 li $s2 1
@@ -163,8 +163,8 @@ if2_end:
 if1_end:
 move $v0 $s2
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 20
@@ -179,12 +179,12 @@ sw $ra -4($fp)
 move $t0 $a1
 move $t1 $a2
 addu $t2 $t1 1
-slti $t1 $t0 $t1
+slt $t1 $t0 $t1
 beqz $t1 if6_else
 li $t1 0
 j if6_end
 if6_else:
-slti $t2 $t0 $t2
+slt $t2 $t0 $t2
 bnez $t2 if7_else
 li $t1 0
 j if7_end
@@ -283,25 +283,25 @@ move $fp $sp
 subu $sp $sp 40
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
-sw $s3 3($sp)
-sw $s4 4($sp)
-sw $s5 5($sp)
-sw $s6 6($sp)
-sw $s7 7($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
+sw $s3 12($sp)
+sw $s4 16($sp)
+sw $s5 20($sp)
+sw $s6 24($sp)
+sw $s7 28($sp)
 move $t0 $a0
 move $s0 $a1
 move $s1 $t0
 li $s2 0
-subu $s3 0 1
+addi $s3 1 0
 move $s4 $t0
 move $s5 $t0
 lw $s6 8($t0)
 lw $s7 0($t0)
 while1_top:
 bnez $s6 ss1_else
-subu $t0 1 $s2
+addi $t0 $s2 1
 j ss1_end
 ss1_else:
 li $t0 0
@@ -328,7 +328,7 @@ move $a0 $s4
 move $s1 $v0
 j if9_end
 if9_else:
-subu $t0 0 555
+addi $t0 555 0
 move $a0 $t0
 jal _print
 bnez $s5 null8
@@ -345,7 +345,7 @@ move $t0 $v0
 move $a0 $s5
 move $a1 $t0
 
-subu $t0 0 555
+addi $t0 555 0
 move $a0 $t0
 jal _print
 if9_end:
@@ -383,13 +383,13 @@ j while1_top
 while1_end:
 move $v0 $s1
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
-lw $s3 3($sp)
-lw $s4 4($sp)
-lw $s5 5($sp)
-lw $s6 6($sp)
-lw $s7 7($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
+lw $s3 12($sp)
+lw $s4 16($sp)
+lw $s5 20($sp)
+lw $s6 24($sp)
+lw $s7 28($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 40
@@ -402,9 +402,9 @@ move $fp $sp
 subu $sp $sp 24
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
-sw $s3 3($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
+sw $s3 12($sp)
 move $t0 $a0
 move $s0 $a1
 li $s1 0
@@ -412,7 +412,7 @@ move $s2 $t0
 lw $s3 8($t0)
 lw $t0 0($t0)
 while2_top:
-subu $t1 1 $s3
+addi $t1 $s3 1
 beqz $t1 while2_end
 bnez $s0 null13
 la $a0 _str0
@@ -452,9 +452,9 @@ j while2_top
 while2_end:
 move $v0 $s1
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
-lw $s3 3($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
+lw $s3 12($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 24
@@ -509,13 +509,13 @@ move $fp $sp
 subu $sp $sp 16
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
+sw $s1 4($sp)
 move $t0 $a0
 move $s0 $t0
 lw $s1 8($t0)
 lw $t0 0($t0)
 while3_top:
-subu $t1 1 $s1
+addi $t1 $s1 1
 beqz $t1 while3_end
 bnez $t0 null17
 la $a0 _str0
@@ -551,7 +551,7 @@ j while3_top
 while3_end:
 li $v0 1
 lw $s0 0($sp)
-lw $s1 1($sp)
+lw $s1 4($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 16
@@ -564,9 +564,9 @@ move $fp $sp
 subu $sp $sp 24
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
-sw $s3 3($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
+sw $s3 12($sp)
 li $a0 12
 jal _heapAlloc
 move $s0 $v0
@@ -615,7 +615,7 @@ j _error
 null26:
 move $a0 $s0
 
-move $a0 10000000
+li $a0 10000000
 jal _print
 li $a0 12
 jal _heapAlloc
@@ -644,7 +644,7 @@ j _error
 null29:
 move $a0 $s0
 
-move $a0 10000000
+li $a0 10000000
 jal _print
 li $a0 12
 jal _heapAlloc
@@ -704,7 +704,7 @@ move $a1 $s3
 move $t0 $v0
 move $a0 $t0
 jal _print
-move $a0 10000000
+li $a0 10000000
 jal _print
 li $a0 12
 jal _heapAlloc
@@ -732,7 +732,7 @@ j _error
 null38:
 move $a0 $s0
 
-move $a0 2220000
+li $a0 2220000
 jal _print
 bnez $s0 null39
 la $a0 _str0
@@ -748,7 +748,7 @@ j _error
 null40:
 move $a0 $s0
 
-move $a0 33300000
+li $a0 33300000
 jal _print
 bnez $s0 null41
 la $a0 _str0
@@ -764,13 +764,13 @@ j _error
 null42:
 move $a0 $s0
 
-move $a0 44440000
+li $a0 44440000
 jal _print
 li $v0 0
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
-lw $s3 3($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
+lw $s3 12($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 24

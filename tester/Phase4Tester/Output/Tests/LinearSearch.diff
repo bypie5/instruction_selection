@@ -1,6 +1,6 @@
 --- SelfTestCases/LinearSearch.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/LinearSearch.out	2020-03-14 14:27:26.000000000 -0700
-@@ -1,16 +1,14 @@
++++ ./Output/Tests/LinearSearch.out	2020-03-14 18:57:59.000000000 -0700
+@@ -1,16 +1,7 @@
 -10
 -11
 -12
@@ -16,15 +16,8 @@
 -1
 -0
 -55
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 58 column 10: "9999": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 109 column 14: "$t2": operand is of incorrect type
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 117 column 1: "(" is not a recognized operator
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 148 column 14: "$t4": operand is of incorrect type
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 156 column 1: "(" is not a recognized operator
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 165 column 14: "$t1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 169 column 14: "$t4": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 170 column 10: "1": operand is of incorrect type
-+Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 206 column 14: "$t2": operand is of incorrect type
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 208 column 9: "2": operand is of incorrect type
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 216 column 1: "(" is not a recognized operator
 +Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 245 column 8: "$t1": operand is of incorrect type

@@ -43,7 +43,7 @@ move $a1 $t0
 
 move $a0 $s0
 
-move $a0 9999
+li $a0 9999
 jal _print
 lw $t0 4($s0)
 subu $t0 $t0 1
@@ -67,13 +67,13 @@ move $fp $sp
 subu $sp $sp 20
 sw $ra -4($fp)
 sw $s0 0($sp)
-sw $s1 1($sp)
-sw $s2 2($sp)
+sw $s1 4($sp)
+sw $s2 8($sp)
 move $s0 $a0
 move $t0 $a1
 move $s1 $a2
 li $t1 0
-slti $t2 $t0 $s1
+slt $t2 $t0 $s1
 beqz $t2 if1_else
 lw $t2 0($s0)
 bnez $t2 null2
@@ -112,7 +112,7 @@ bounds2:
 mul $t7 $s2 4
 addu $t7 $t7 $t6
 lw $t7 4($t7)
-slti $t6 $t7 $t3
+slt $t6 $t7 $t3
 bnez $t6 if2_else
 li $t5 0
 j if2_end
@@ -139,7 +139,7 @@ bounds3:
 mul $t8 $t2 4
 addu $t8 $t8 $t6
 lw $t7 4($t8)
-slti $t7 $t3 $t7
+slt $t7 $t3 $t7
 bnez $t7 if3_else
 li $t5 0
 j if3_end
@@ -205,7 +205,7 @@ mul $t5 $t2 4
 addu $t5 $t5 $t8
 sw $t1 4($t5)
 addu $t5 $s2 1
-slti $t5 $t2 $t5
+slt $t5 $t2 $t5
 beqz $t5 if4_else
 li $t4 0
 j if4_end
@@ -299,8 +299,8 @@ if1_else:
 if1_end:
 li $v0 0
 lw $s0 0($sp)
-lw $s1 1($sp)
-lw $s2 2($sp)
+lw $s1 4($sp)
+lw $s2 8($sp)
 lw $ra -4($fp)
 lw $fp -8($fp)
 addu $sp $sp 20
@@ -316,7 +316,7 @@ move $t0 $a0
 li $t1 0
 while4_top:
 lw $t2 4($t0)
-slti $t2 $t1 $t2
+slt $t2 $t1 $t2
 beqz $t2 while4_end
 lw $t2 0($t0)
 bnez $t2 null14

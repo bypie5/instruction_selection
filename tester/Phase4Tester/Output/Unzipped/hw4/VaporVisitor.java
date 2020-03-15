@@ -101,16 +101,28 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
                 currLine += "addu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 break;
             case "Sub":
-                currLine += "subu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                if (c.args[0] instanceof  VOperand.Static) {
+                    currLine += "addi " + c.dest.toString() + " " + c.args[1].toString() + " " + c.args[0].toString();
+                } else {
+                    currLine += "subu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                }
                 break;
             case "LtS":
-                currLine += "slti " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                if (c.args[1] instanceof VOperand.Static) {
+                    currLine += "slti " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                } else {
+                    currLine += "slt " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                }
                 break;
             case "MulS":
                 currLine += "mul " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 break;
             case "PrintIntS":
-                currLine += "move $a0 " + c.args[0].toString() + "\n";
+                if (c.args[0] instanceof VVarRef) {
+                    currLine += "move $a0 " + c.args[0].toString() + "\n";
+                } else {
+                    currLine += "li $a0 " + c.args[0].toString() + "\n";
+                }
                 currLine += "jal _print";
                 break;
             case "HeapAllocZ":
@@ -142,11 +154,11 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
             offset = Integer.toString(((VMemRef.Global) w.dest).byteOffset);
         } else {
             dest = "$sp";
-            offset = Integer.toString(((VMemRef.Stack) w.dest).index);
+            offset = Integer.toString(((VMemRef.Stack) w.dest).index * 4);
         }
 
         if (w.source instanceof VVarRef) {
-            currLine += "sw " + w.source.toString() + " " + offset + "(" + dest + ")";
+            currLine += "sw " + w.source.toString() + " " + (offset) + "(" + dest + ")";
         } else {
             currLine += "la $t9 " + source + "\n";
             currLine += "sw $t9 " + offset + "(" + dest + ")";
@@ -169,7 +181,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         } else if (r.source instanceof VMemRef.Stack) {
             // Stack
             source = "$sp";
-            offset = Integer.toString(((VMemRef.Stack) r.source).index);
+            offset = Integer.toString(((VMemRef.Stack) r.source).index * 4);
         }
 
         currLine += "lw " + r.dest.toString() + " " + offset + "(" + source + ")";
@@ -204,7 +216,11 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         int relPos = getRelativePos(r.sourcePos.line);
 
         if (r.value != null) {
-            currLine += "move $v0 " + r.value.toString() + "\n";
+            if (r.value instanceof VVarRef) {
+                currLine += "move $v0 " + r.value.toString() + "\n";
+            } else if (r.value instanceof VOperand.Static) {
+                currLine += "li $v0 " + r.value.toString() + "\n";
+            }
         }
 
         // on exit
