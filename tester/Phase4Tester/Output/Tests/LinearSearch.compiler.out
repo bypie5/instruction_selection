@@ -195,7 +195,7 @@ move $s0 $a0
 move $t0 $a1
 sw $t0 8($s0)
 move $a0 $t0
-
+jal AllocArray
 move $t0 $v0
 sw $t0 4($s0)
 li $t0 1

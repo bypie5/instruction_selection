@@ -1,5 +1,5 @@
 --- SelfTestCases/LinearSearch.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/LinearSearch.out	2020-03-14 18:57:59.000000000 -0700
++++ ./Output/Tests/LinearSearch.out	2020-03-14 19:19:02.000000000 -0700
 @@ -1,16 +1,7 @@
 -10
 -11

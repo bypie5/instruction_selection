@@ -16,8 +16,8 @@ sw $fp -8($sp)
 move $fp $sp
 subu $sp $sp 8
 sw $ra -4($fp)
-li $a0 :empty_TV
-
+la $a0 empty_TV
+jal TV.Start
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -42,13 +42,13 @@ j _error
 null1:
 move $a0 $s0
 li $a1 16
-
+jal Tree.Init
 bnez $s0 null2
 la $a0 _str0
 j _error
 null2:
 move $a0 $s0
-
+jal Tree.Print
 li $a0 100000000
 jal _print
 bnez $s0 null3
@@ -57,55 +57,55 @@ j _error
 null3:
 move $a0 $s0
 li $a1 8
-
+jal Tree.Insert
 bnez $s0 null4
 la $a0 _str0
 j _error
 null4:
 move $a0 $s0
 li $a1 24
-
+jal Tree.Insert
 bnez $s0 null5
 la $a0 _str0
 j _error
 null5:
 move $a0 $s0
 li $a1 4
-
+jal Tree.Insert
 bnez $s0 null6
 la $a0 _str0
 j _error
 null6:
 move $a0 $s0
 li $a1 12
-
+jal Tree.Insert
 bnez $s0 null7
 la $a0 _str0
 j _error
 null7:
 move $a0 $s0
 li $a1 20
-
+jal Tree.Insert
 bnez $s0 null8
 la $a0 _str0
 j _error
 null8:
 move $a0 $s0
 li $a1 28
-
+jal Tree.Insert
 bnez $s0 null9
 la $a0 _str0
 j _error
 null9:
 move $a0 $s0
 li $a1 14
-
+jal Tree.Insert
 bnez $s0 null10
 la $a0 _str0
 j _error
 null10:
 move $a0 $s0
-
+jal Tree.Print
 li $a0 100000000
 jal _print
 li $a0 12
@@ -122,7 +122,7 @@ j _error
 null11:
 move $a0 $s0
 move $a1 $t0
-
+jal Tree.accept
 li $a0 100000000
 jal _print
 bnez $s0 null12
@@ -131,7 +131,7 @@ j _error
 null12:
 move $a0 $s0
 li $a1 24
-
+jal Tree.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -141,7 +141,7 @@ j _error
 null13:
 move $a0 $s0
 li $a1 12
-
+jal Tree.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -151,7 +151,7 @@ j _error
 null14:
 move $a0 $s0
 li $a1 16
-
+jal Tree.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -161,7 +161,7 @@ j _error
 null15:
 move $a0 $s0
 li $a1 50
-
+jal Tree.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -171,7 +171,7 @@ j _error
 null16:
 move $a0 $s0
 li $a1 12
-
+jal Tree.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -181,20 +181,20 @@ j _error
 null17:
 move $a0 $s0
 li $a1 12
-
+jal Tree.Delete
 bnez $s0 null18
 la $a0 _str0
 j _error
 null18:
 move $a0 $s0
-
+jal Tree.Print
 bnez $s0 null19
 la $a0 _str0
 j _error
 null19:
 move $a0 $s0
 li $a1 12
-
+jal Tree.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -418,7 +418,7 @@ j _error
 null20:
 move $a0 $s2
 move $a1 $s1
-
+jal Tree.Init
 move $s0 $s0
 li $s3 1
 while1_top:
@@ -428,7 +428,7 @@ la $a0 _str0
 j _error
 null21:
 move $a0 $s0
-
+jal Tree.GetKey
 move $t0 $v0
 slt $t0 $s1 $t0
 beqz $t0 if3_else
@@ -437,7 +437,7 @@ la $a0 _str0
 j _error
 null22:
 move $a0 $s0
-
+jal Tree.GetHas_Left
 move $t0 $v0
 beqz $t0 if4_else
 bnez $s0 null23
@@ -445,7 +445,7 @@ la $a0 _str0
 j _error
 null23:
 move $a0 $s0
-
+jal Tree.GetLeft
 move $s0 $v0
 j if4_end
 if4_else:
@@ -456,14 +456,14 @@ j _error
 null24:
 move $a0 $s0
 li $a1 1
-
+jal Tree.SetHas_Left
 bnez $s0 null25
 la $a0 _str0
 j _error
 null25:
 move $a0 $s0
 move $a1 $s2
-
+jal Tree.SetLeft
 if4_end:
 j if3_end
 if3_else:
@@ -472,7 +472,7 @@ la $a0 _str0
 j _error
 null26:
 move $a0 $s0
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if5_else
 bnez $s0 null27
@@ -480,7 +480,7 @@ la $a0 _str0
 j _error
 null27:
 move $a0 $s0
-
+jal Tree.GetRight
 move $s0 $v0
 j if5_end
 if5_else:
@@ -491,14 +491,14 @@ j _error
 null28:
 move $a0 $s0
 li $a1 1
-
+jal Tree.SetHas_Right
 bnez $s0 null29
 la $a0 _str0
 j _error
 null29:
 move $a0 $s0
 move $a1 $s2
-
+jal Tree.SetRight
 if5_end:
 if3_end:
 j while1_top
@@ -540,7 +540,7 @@ la $a0 _str0
 j _error
 null30:
 move $a0 $s2
-
+jal Tree.GetKey
 move $t0 $v0
 slt $t1 $s1 $t0
 beqz $t1 if6_else
@@ -549,7 +549,7 @@ la $a0 _str0
 j _error
 null31:
 move $a0 $s2
-
+jal Tree.GetHas_Left
 move $t1 $v0
 beqz $t1 if7_else
 move $s3 $s2
@@ -558,7 +558,7 @@ la $a0 _str0
 j _error
 null32:
 move $a0 $s2
-
+jal Tree.GetLeft
 move $s2 $v0
 j if7_end
 if7_else:
@@ -573,7 +573,7 @@ la $a0 _str0
 j _error
 null33:
 move $a0 $s2
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if9_else
 move $s3 $s2
@@ -582,7 +582,7 @@ la $a0 _str0
 j _error
 null34:
 move $a0 $s2
-
+jal Tree.GetRight
 move $s2 $v0
 j if9_end
 if9_else:
@@ -596,7 +596,7 @@ la $a0 _str0
 j _error
 null35:
 move $a0 $s2
-
+jal Tree.GetHas_Right
 move $t0 $v0
 bnez $t0 if11_else
 bnez $s2 null36
@@ -604,7 +604,7 @@ la $a0 _str0
 j _error
 null36:
 move $a0 $s2
-
+jal Tree.GetHas_Left
 move $t0 $v0
 bnez $t0 if11_else
 j if11_end
@@ -612,14 +612,14 @@ if11_else:
 move $a0 $s0
 move $a1 $s3
 move $a2 $s2
-
+jal Tree.Remove
 if11_end:
 j if10_end
 if10_else:
 move $a0 $s0
 move $a1 $s3
 move $a2 $s2
-
+jal Tree.Remove
 if10_end:
 li $s5 1
 li $s4 0
@@ -658,13 +658,13 @@ la $a0 _str0
 j _error
 null37:
 move $a0 $s2
-
+jal Tree.GetHas_Left
 move $t0 $v0
 beqz $t0 if12_else
 move $a0 $s0
 move $a1 $s1
 move $a2 $s2
-
+jal Tree.RemoveLeft
 j if12_end
 if12_else:
 bnez $s2 null38
@@ -672,13 +672,13 @@ la $a0 _str0
 j _error
 null38:
 move $a0 $s2
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if13_else
 move $a0 $s0
 move $a1 $s1
 move $a2 $s2
-
+jal Tree.RemoveRight
 j if13_end
 if13_else:
 bnez $s2 null39
@@ -686,26 +686,26 @@ la $a0 _str0
 j _error
 null39:
 move $a0 $s2
-
+jal Tree.GetKey
 move $s2 $v0
 bnez $s1 null40
 la $a0 _str0
 j _error
 null40:
 move $a0 $s1
-
+jal Tree.GetLeft
 move $t0 $v0
 bnez $t0 null41
 la $a0 _str0
 j _error
 null41:
 move $a0 $t0
-
+jal Tree.GetKey
 move $t0 $v0
 move $a0 $s0
 move $a1 $s2
 move $a2 $t0
-
+jal Tree.Compare
 move $t0 $v0
 beqz $t0 if14_else
 bnez $s1 null42
@@ -715,14 +715,14 @@ null42:
 lw $t0 20($s0)
 move $a0 $s1
 move $a1 $t0
-
+jal Tree.SetLeft
 bnez $s1 null43
 la $a0 _str0
 j _error
 null43:
 move $a0 $s1
 li $a1 0
-
+jal Tree.SetHas_Left
 j if14_end
 if14_else:
 bnez $s1 null44
@@ -732,14 +732,14 @@ null44:
 lw $t0 20($s0)
 move $a0 $s1
 move $a1 $t0
-
+jal Tree.SetRight
 bnez $s1 null45
 la $a0 _str0
 j _error
 null45:
 move $a0 $s1
 li $a1 0
-
+jal Tree.SetHas_Right
 if14_end:
 if13_end:
 if12_end:
@@ -770,7 +770,7 @@ la $a0 _str0
 j _error
 null46:
 move $a0 $s2
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 while3_end
 bnez $s2 null47
@@ -782,25 +782,25 @@ la $a0 _str0
 j _error
 null48:
 move $a0 $s2
-
+jal Tree.GetRight
 move $t0 $v0
 bnez $t0 null49
 la $a0 _str0
 j _error
 null49:
 move $a0 $t0
-
+jal Tree.GetKey
 move $t0 $v0
 move $a0 $s2
 move $a1 $t0
-
+jal Tree.SetKey
 move $s1 $s2
 bnez $s2 null50
 la $a0 _str0
 j _error
 null50:
 move $a0 $s2
-
+jal Tree.GetRight
 move $s2 $v0
 j while3_top
 while3_end:
@@ -811,14 +811,14 @@ null51:
 lw $t0 20($s0)
 move $a0 $s1
 move $a1 $t0
-
+jal Tree.SetRight
 bnez $s1 null52
 la $a0 _str0
 j _error
 null52:
 move $a0 $s1
 li $a1 0
-
+jal Tree.SetHas_Right
 li $v0 1
 lw $s0 0($sp)
 lw $s1 4($sp)
@@ -846,7 +846,7 @@ la $a0 _str0
 j _error
 null53:
 move $a0 $s2
-
+jal Tree.GetHas_Left
 move $t0 $v0
 beqz $t0 while4_end
 bnez $s2 null54
@@ -858,25 +858,25 @@ la $a0 _str0
 j _error
 null55:
 move $a0 $s2
-
+jal Tree.GetLeft
 move $t0 $v0
 bnez $t0 null56
 la $a0 _str0
 j _error
 null56:
 move $a0 $t0
-
+jal Tree.GetKey
 move $t0 $v0
 move $a0 $s2
 move $a1 $t0
-
+jal Tree.SetKey
 move $s1 $s2
 bnez $s2 null57
 la $a0 _str0
 j _error
 null57:
 move $a0 $s2
-
+jal Tree.GetLeft
 move $s2 $v0
 j while4_top
 while4_end:
@@ -887,14 +887,14 @@ null58:
 lw $t0 20($s0)
 move $a0 $s1
 move $a1 $t0
-
+jal Tree.SetLeft
 bnez $s1 null59
 la $a0 _str0
 j _error
 null59:
 move $a0 $s1
 li $a1 0
-
+jal Tree.SetHas_Left
 li $v0 1
 lw $s0 0($sp)
 lw $s1 4($sp)
@@ -926,7 +926,7 @@ la $a0 _str0
 j _error
 null60:
 move $a0 $s1
-
+jal Tree.GetKey
 move $t0 $v0
 slt $t1 $s0 $t0
 beqz $t1 if15_else
@@ -935,7 +935,7 @@ la $a0 _str0
 j _error
 null61:
 move $a0 $s1
-
+jal Tree.GetHas_Left
 move $t1 $v0
 beqz $t1 if16_else
 bnez $s1 null62
@@ -943,7 +943,7 @@ la $a0 _str0
 j _error
 null62:
 move $a0 $s1
-
+jal Tree.GetLeft
 move $s1 $v0
 j if16_end
 if16_else:
@@ -958,7 +958,7 @@ la $a0 _str0
 j _error
 null63:
 move $a0 $s1
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if18_else
 bnez $s1 null64
@@ -966,7 +966,7 @@ la $a0 _str0
 j _error
 null64:
 move $a0 $s1
-
+jal Tree.GetRight
 move $s1 $v0
 j if18_end
 if18_else:
@@ -1000,7 +1000,7 @@ move $t0 $a0
 move $t1 $t0
 move $a0 $t0
 move $a1 $t1
-
+jal Tree.RecPrint
 li $v0 1
 lw $ra -4($fp)
 lw $fp -8($fp)
@@ -1022,7 +1022,7 @@ la $a0 _str0
 j _error
 null65:
 move $a0 $s1
-
+jal Tree.GetHas_Left
 move $t0 $v0
 beqz $t0 if19_else
 bnez $s1 null66
@@ -1030,11 +1030,11 @@ la $a0 _str0
 j _error
 null66:
 move $a0 $s1
-
+jal Tree.GetLeft
 move $t0 $v0
 move $a0 $s0
 move $a1 $t0
-
+jal Tree.RecPrint
 j if19_end
 if19_else:
 if19_end:
@@ -1043,7 +1043,7 @@ la $a0 _str0
 j _error
 null67:
 move $a0 $s1
-
+jal Tree.GetKey
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -1052,7 +1052,7 @@ la $a0 _str0
 j _error
 null68:
 move $a0 $s1
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if20_else
 bnez $s1 null69
@@ -1060,11 +1060,11 @@ la $a0 _str0
 j _error
 null69:
 move $a0 $s1
-
+jal Tree.GetRight
 move $t0 $v0
 move $a0 $s0
 move $a1 $t0
-
+jal Tree.RecPrint
 j if20_end
 if20_else:
 if20_end:
@@ -1116,7 +1116,7 @@ la $a0 _str0
 j _error
 null71:
 move $a0 $s1
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if21_else
 bnez $s1 null72
@@ -1124,7 +1124,7 @@ la $a0 _str0
 j _error
 null72:
 move $a0 $s1
-
+jal Tree.GetRight
 move $t0 $v0
 sw $t0 8($s0)
 lw $t0 8($s0)
@@ -1134,7 +1134,7 @@ j _error
 null73:
 move $a0 $t0
 move $a1 $s0
-
+jal Tree.accept
 j if21_end
 if21_else:
 if21_end:
@@ -1143,7 +1143,7 @@ la $a0 _str0
 j _error
 null74:
 move $a0 $s1
-
+jal Tree.GetHas_Left
 move $t0 $v0
 beqz $t0 if22_else
 bnez $s1 null75
@@ -1151,7 +1151,7 @@ la $a0 _str0
 j _error
 null75:
 move $a0 $s1
-
+jal Tree.GetLeft
 move $t0 $v0
 sw $t0 4($s0)
 lw $t0 4($s0)
@@ -1161,7 +1161,7 @@ j _error
 null76:
 move $a0 $t0
 move $a1 $s0
-
+jal Tree.accept
 j if22_end
 if22_else:
 if22_end:
@@ -1188,7 +1188,7 @@ la $a0 _str0
 j _error
 null77:
 move $a0 $s1
-
+jal Tree.GetHas_Right
 move $t0 $v0
 beqz $t0 if23_else
 bnez $s1 null78
@@ -1196,7 +1196,7 @@ la $a0 _str0
 j _error
 null78:
 move $a0 $s1
-
+jal Tree.GetRight
 move $t0 $v0
 sw $t0 8($s0)
 lw $t0 8($s0)
@@ -1206,7 +1206,7 @@ j _error
 null79:
 move $a0 $t0
 move $a1 $s0
-
+jal Tree.accept
 j if23_end
 if23_else:
 if23_end:
@@ -1215,7 +1215,7 @@ la $a0 _str0
 j _error
 null80:
 move $a0 $s1
-
+jal Tree.GetKey
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -1224,7 +1224,7 @@ la $a0 _str0
 j _error
 null81:
 move $a0 $s1
-
+jal Tree.GetHas_Left
 move $t0 $v0
 beqz $t0 if24_else
 bnez $s1 null82
@@ -1232,7 +1232,7 @@ la $a0 _str0
 j _error
 null82:
 move $a0 $s1
-
+jal Tree.GetLeft
 move $t0 $v0
 sw $t0 4($s0)
 lw $t0 4($s0)
@@ -1242,7 +1242,7 @@ j _error
 null83:
 move $a0 $t0
 move $a1 $s0
-
+jal Tree.accept
 j if24_end
 if24_else:
 if24_end:

@@ -1,5 +1,5 @@
 --- SelfTestCases/QuickSort.opt.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/QuickSort.opt.out	2020-03-14 18:58:05.000000000 -0700
++++ ./Output/Tests/QuickSort.opt.out	2020-03-14 19:19:10.000000000 -0700
 @@ -1,23 +1,36 @@
 -20
 -7

@@ -20,7 +20,7 @@ j _error
 null1:
 move $a0 $t0
 li $a1 10
-
+jal LS.Start
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -40,32 +40,32 @@ move $s0 $a0
 move $t0 $a1
 move $a0 $s0
 move $a1 $t0
-
+jal LS.Init
 move $a0 $s0
-
+jal LS.Print
 li $a0 9999
 jal _print
 move $a0 $s0
 li $a1 8
-
+jal LS.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
 move $a0 $s0
 li $a1 12
-
+jal LS.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
 move $a0 $s0
 li $a1 17
-
+jal LS.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
 move $a0 $s0
 li $a1 50
-
+jal LS.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -174,7 +174,7 @@ move $s0 $a0
 move $t0 $a1
 sw $t0 4($s0)
 move $a0 $t0
-
+jal AllocArray
 move $t0 $v0
 sw $t0 0($s0)
 li $t0 1

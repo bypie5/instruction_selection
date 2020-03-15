@@ -1,3 +1,2 @@
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/Factorial.opt.compiler.out line 14 column 1: "li": Too many or incorrectly formatted operands. Expected: li $t1,-100
+3628800
 
-Processing terminated due to errors.

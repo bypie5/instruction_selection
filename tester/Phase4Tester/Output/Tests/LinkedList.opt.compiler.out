@@ -13,8 +13,8 @@ sw $fp -8($sp)
 move $fp $sp
 subu $sp $sp 8
 sw $ra -4($fp)
-li $a0 :empty_LL
-
+la $a0 empty_LL
+jal LL.Start
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -101,13 +101,13 @@ la $a0 _str0
 j _error
 null1:
 move $a0 $s1
-
+jal Element.GetAge
 move $t0 $v0
 lw $t1 0($s0)
 move $a0 $s0
 move $a1 $t0
 move $a2 $t1
-
+jal Element.Compare
 move $t1 $v0
 bnez $t1 if1_else
 li $s2 0
@@ -118,13 +118,13 @@ la $a0 _str0
 j _error
 null2:
 move $a0 $s1
-
+jal Element.GetSalary
 move $t1 $v0
 lw $t0 4($s0)
 move $a0 $s0
 move $a1 $t1
 move $a2 $t0
-
+jal Element.Compare
 move $t0 $v0
 bnez $t0 if2_else
 li $s2 0
@@ -137,7 +137,7 @@ la $a0 _str0
 j _error
 null3:
 move $a0 $s1
-
+jal Element.GetMarried
 move $t0 $v0
 bnez $t0 if4_else
 li $s2 0
@@ -151,7 +151,7 @@ la $a0 _str0
 j _error
 null4:
 move $a0 $s1
-
+jal Element.GetMarried
 move $t0 $v0
 beqz $t0 if5_else
 li $s2 0
@@ -253,7 +253,7 @@ move $a0 $s0
 move $a1 $t1
 move $a2 $t0
 li $a3 0
-
+jal List.InitNew
 move $v0 $s0
 lw $s0 0($sp)
 lw $ra -4($fp)
@@ -313,7 +313,7 @@ j _error
 null6:
 move $a0 $s0
 move $a1 $s7
-
+jal Element.Equal
 move $t0 $v0
 beqz $t0 if8_else
 li $s2 1
@@ -324,7 +324,7 @@ la $a0 _str0
 j _error
 null7:
 move $a0 $s4
-
+jal List.GetNext
 move $s1 $v0
 j if9_end
 if9_else:
@@ -340,11 +340,11 @@ la $a0 _str0
 j _error
 null9:
 move $a0 $s4
-
+jal List.GetNext
 move $t0 $v0
 move $a0 $s5
 move $a1 $t0
-
+jal List.SetNext
 addi $t0 555 0
 move $a0 $t0
 jal _print
@@ -359,21 +359,21 @@ la $a0 _str0
 j _error
 null10:
 move $a0 $s4
-
+jal List.GetNext
 move $s4 $v0
 bnez $s4 null11
 la $a0 _str0
 j _error
 null11:
 move $a0 $s4
-
+jal List.GetEnd
 move $s6 $v0
 bnez $s4 null12
 la $a0 _str0
 j _error
 null12:
 move $a0 $s4
-
+jal List.GetElem
 move $s7 $v0
 li $s3 1
 j if10_end
@@ -420,7 +420,7 @@ j _error
 null13:
 move $a0 $s0
 move $a1 $t0
-
+jal Element.Equal
 move $t1 $v0
 beqz $t1 if11_else
 li $s1 1
@@ -432,21 +432,21 @@ la $a0 _str0
 j _error
 null14:
 move $a0 $s2
-
+jal List.GetNext
 move $s2 $v0
 bnez $s2 null15
 la $a0 _str0
 j _error
 null15:
 move $a0 $s2
-
+jal List.GetEnd
 move $s3 $v0
 bnez $s2 null16
 la $a0 _str0
 j _error
 null16:
 move $a0 $s2
-
+jal List.GetElem
 move $t0 $v0
 j while2_top
 while2_end:
@@ -522,7 +522,7 @@ la $a0 _str0
 j _error
 null17:
 move $a0 $t0
-
+jal Element.GetAge
 move $t1 $v0
 move $a0 $t1
 jal _print
@@ -531,21 +531,21 @@ la $a0 _str0
 j _error
 null18:
 move $a0 $s0
-
+jal List.GetNext
 move $s0 $v0
 bnez $s0 null19
 la $a0 _str0
 j _error
 null19:
 move $a0 $s0
-
+jal List.GetEnd
 move $s1 $v0
 bnez $s0 null20
 la $a0 _str0
 j _error
 null20:
 move $a0 $s0
-
+jal List.GetElem
 move $t0 $v0
 j while3_top
 while3_end:
@@ -575,20 +575,20 @@ la $a0 _str0
 j _error
 null21:
 move $a0 $s0
-
+jal List.Init
 move $s0 $s0
 bnez $s0 null22
 la $a0 _str0
 j _error
 null22:
 move $a0 $s0
-
+jal List.Init
 bnez $s0 null23
 la $a0 _str0
 j _error
 null23:
 move $a0 $s0
-
+jal List.Print
 li $a0 12
 jal _heapAlloc
 move $s1 $v0
@@ -600,21 +600,21 @@ move $a0 $s1
 li $a1 25
 li $a2 37000
 li $a3 0
-
+jal Element.Init
 bnez $s0 null25
 la $a0 _str0
 j _error
 null25:
 move $a0 $s0
 move $a1 $s1
-
+jal List.Insert
 move $s0 $v0
 bnez $s0 null26
 la $a0 _str0
 j _error
 null26:
 move $a0 $s0
-
+jal List.Print
 li $a0 10000000
 jal _print
 li $a0 12
@@ -628,7 +628,7 @@ move $a0 $s1
 li $a1 39
 li $a2 42000
 li $a3 1
-
+jal Element.Init
 move $s2 $s1
 bnez $s0 null28
 la $a0 _str0
@@ -636,14 +636,14 @@ j _error
 null28:
 move $a0 $s0
 move $a1 $s1
-
+jal List.Insert
 move $s0 $v0
 bnez $s0 null29
 la $a0 _str0
 j _error
 null29:
 move $a0 $s0
-
+jal List.Print
 li $a0 10000000
 jal _print
 li $a0 12
@@ -657,21 +657,21 @@ move $a0 $s1
 li $a1 22
 li $a2 34000
 li $a3 0
-
+jal Element.Init
 bnez $s0 null31
 la $a0 _str0
 j _error
 null31:
 move $a0 $s0
 move $a1 $s1
-
+jal List.Insert
 move $s0 $v0
 bnez $s0 null32
 la $a0 _str0
 j _error
 null32:
 move $a0 $s0
-
+jal List.Print
 li $a0 12
 jal _heapAlloc
 move $s3 $v0
@@ -683,14 +683,14 @@ move $a0 $s3
 li $a1 27
 li $a2 34000
 li $a3 0
-
+jal Element.Init
 bnez $s0 null34
 la $a0 _str0
 j _error
 null34:
 move $a0 $s0
 move $a1 $s2
-
+jal List.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -700,7 +700,7 @@ j _error
 null35:
 move $a0 $s0
 move $a1 $s3
-
+jal List.Search
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -717,21 +717,21 @@ move $a0 $s1
 li $a1 28
 li $a2 35000
 li $a3 0
-
+jal Element.Init
 bnez $s0 null37
 la $a0 _str0
 j _error
 null37:
 move $a0 $s0
 move $a1 $s1
-
+jal List.Insert
 move $s0 $v0
 bnez $s0 null38
 la $a0 _str0
 j _error
 null38:
 move $a0 $s0
-
+jal List.Print
 li $a0 2220000
 jal _print
 bnez $s0 null39
@@ -740,14 +740,14 @@ j _error
 null39:
 move $a0 $s0
 move $a1 $s2
-
+jal List.Delete
 move $s0 $v0
 bnez $s0 null40
 la $a0 _str0
 j _error
 null40:
 move $a0 $s0
-
+jal List.Print
 li $a0 33300000
 jal _print
 bnez $s0 null41
@@ -756,14 +756,14 @@ j _error
 null41:
 move $a0 $s0
 move $a1 $s1
-
+jal List.Delete
 move $s0 $v0
 bnez $s0 null42
 la $a0 _str0
 j _error
 null42:
 move $a0 $s0
-
+jal List.Print
 li $a0 44440000
 jal _print
 li $v0 0

@@ -64,4 +64,18 @@ public class VM2MTest {
         assertEquals("ALWAYS FAIL", outContent.toString());
     }
 
+    @Test
+    public void binaryTreeOptTest() {
+        try {
+            File inputFile = new File("./tester/Phase4Tester/SelfTestCases/BinaryTree.opt.vaporm");
+            System.setIn(new FileInputStream(inputFile));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            fail();
+        }
+
+        VM2M.instructionSelection();
+        assertEquals("ALWAYS FAIL", outContent.toString());
+    }
+
 }

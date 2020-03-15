@@ -1,5 +1,5 @@
 --- SelfTestCases/BubbleSort.out	2011-04-28 14:55:21.000000000 -0700
-+++ ./Output/Tests/BubbleSort.out	2020-03-14 18:57:53.000000000 -0700
++++ ./Output/Tests/BubbleSort.out	2020-03-14 19:18:54.000000000 -0700
 @@ -1,23 +1,31 @@
 -20
 -7

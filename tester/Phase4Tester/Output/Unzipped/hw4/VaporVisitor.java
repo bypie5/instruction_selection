@@ -72,8 +72,10 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
 
         if (a.source instanceof VVarRef) {
             currLine += "move " + destReg + " " + a.source.toString();
-        } else if (a.source instanceof VOperand.Static) {
+        } else if (a.source instanceof VLitInt) {
             currLine += "li " + destReg + " " + a.source.toString();
+        } else {
+            currLine += "la " + destReg + " " + a.source.toString().replace(":", "");
         }
 
         addLine(relPos, currLine);
@@ -86,7 +88,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
         if (c.addr instanceof VAddr.Var) {
             currLine += "jalr " + c.addr.toString();
         } else {
-
+            currLine += "jal " + c.addr.toString().replace(":","");
         }
 
         addLine(relPos, currLine);

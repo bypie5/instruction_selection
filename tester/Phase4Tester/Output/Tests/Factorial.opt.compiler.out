@@ -11,9 +11,9 @@ sw $fp -8($sp)
 move $fp $sp
 subu $sp $sp 8
 sw $ra -4($fp)
-li $a0 :empty_Fac
+la $a0 empty_Fac
 li $a1 10
-
+jal Fac.ComputeFac
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -39,7 +39,7 @@ if1_else:
 subu $t2 $s0 1
 move $a0 $t0
 move $a1 $t2
-
+jal Fac.ComputeFac
 move $t2 $v0
 mul $t1 $s0 $t2
 if1_end:

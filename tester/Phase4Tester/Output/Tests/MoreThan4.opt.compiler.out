@@ -11,7 +11,7 @@ sw $fp -8($sp)
 move $fp $sp
 subu $sp $sp 20
 sw $ra -4($fp)
-li $a0 :empty_MT4
+la $a0 empty_MT4
 li $a1 1
 li $a2 2
 li $a3 3
@@ -21,7 +21,7 @@ la $t9 5
 sw $t9 4($sp)
 la $t9 6
 sw $t9 8($sp)
-
+jal MT4.Start
 move $t0 $v0
 move $a0 $t0
 jal _print
@@ -62,7 +62,7 @@ move $a3 $t4
 sw $t3 0($sp)
 sw $t2 4($sp)
 sw $t1 8($sp)
-
+jal MT4.Change
 move $t6 $v0
 move $v0 $t6
 lw $ra -4($fp)
