@@ -377,7 +377,7 @@ subu $sp $sp 8
 sw $ra -4($fp)
 move $t0 $a1
 move $t1 $a2
-addu $t2 $t1 1
+add $t2 $t1 1
 slt $t1 $t0 $t1
 beqz $t1 if1_else
 li $t1 0

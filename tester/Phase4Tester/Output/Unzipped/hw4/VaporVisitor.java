@@ -107,7 +107,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
                     currLine += "addi $t9 $t9 " + c.args[0].toString() + "\n";
                     currLine += "move " + c.dest.toString() + " $t9\n";
                 } else {
-                    currLine += "addu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                    currLine += "add " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 }
                 break;
             case "Sub":
@@ -115,12 +115,11 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
                     int value = Integer.parseInt(c.args[0].toString()) * -1;
                     currLine += "addi " + c.dest.toString() + " " + c.args[1].toString() + " " + value;
                 } else if (c.args[0] instanceof VOperand.Static) {
-                    currLine += "li $t9 " + c.args[1].toString() + "\n";
-                    int value = Integer.parseInt(c.args[0].toString()) * -1;
-                    currLine += "addi $t9 $t9 " + value + "\n";
-                    currLine += "move " + c.dest.toString() + " $t9\n";
+                    currLine += "li $t9 " + c.args[0].toString() + "\n";
+                    currLine += "li $t8 " + c.args[1].toString() + "\n";
+                    currLine += "subu " + c.dest.toString() + " $t9 $t8\n";
                 } else {
-                    currLine += "subu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                    currLine += "sub " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 }
                 break;
             case "LtS":
@@ -183,11 +182,7 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
             offset = Integer.toString(((VMemRef.Global) w.dest).byteOffset);
         } else {
             dest = "$sp";
-            //if (((VMemRef.Stack) w.dest).region == VMemRef.Stack.Region.Out) {
             offset = Integer.toString((((VMemRef.Stack) w.dest).index) * 4);
-            //} else {
-             //   offset = Integer.toString(((VMemRef.Stack) w.dest).index * 4);
-            //}
         }
 
         if (w.source instanceof VVarRef) {

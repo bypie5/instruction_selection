@@ -36,7 +36,7 @@ beqz $t1 if1_else
 li $t1 1
 j if1_end
 if1_else:
-subu $t2 $s0 1
+sub $t2 $s0 1
 move $a0 $t0
 move $a1 $t2
 jal Fac.ComputeFac

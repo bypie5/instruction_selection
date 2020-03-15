@@ -46,7 +46,7 @@ jal QS.Print
 li $a0 9999
 jal _print
 lw $t0 4($s0)
-subu $t0 $t0 1
+sub $t0 $t0 1
 move $a0 $s0
 li $a1 0
 move $a2 $t0
@@ -87,9 +87,9 @@ la $a0 _str0
 j _error
 bounds1:
 mul $t3 $s1 4
-addu $t3 $t3 $t2
+add $t3 $t3 $t2
 lw $t3 4($t3)
-subu $s2 $t0 1
+sub $s2 $t0 1
 move $t2 $s1
 li $t4 1
 while1_top:
@@ -97,7 +97,7 @@ beqz $t4 while1_end
 li $t5 1
 while2_top:
 beqz $t5 while2_end
-addu $s2 $s2 1
+add $s2 $s2 1
 lw $t6 0($s0)
 bnez $t6 null3
 la $a0 _str0
@@ -110,7 +110,7 @@ la $a0 _str0
 j _error
 bounds2:
 mul $t7 $s2 4
-addu $t7 $t7 $t6
+add $t7 $t7 $t6
 lw $t7 4($t7)
 slt $t6 $t7 $t3
 bnez $t6 if2_else
@@ -124,7 +124,7 @@ while2_end:
 li $t5 1
 while3_top:
 beqz $t5 while3_end
-subu $t2 $t2 1
+sub $t2 $t2 1
 lw $t6 0($s0)
 bnez $t6 null4
 la $a0 _str0
@@ -137,7 +137,7 @@ la $a0 _str0
 j _error
 bounds3:
 mul $t8 $t2 4
-addu $t8 $t8 $t6
+add $t8 $t8 $t6
 lw $t7 4($t8)
 slt $t7 $t3 $t7
 bnez $t7 if3_else
@@ -160,7 +160,7 @@ la $a0 _str0
 j _error
 bounds4:
 mul $t7 $s2 4
-addu $t7 $t7 $t5
+add $t7 $t7 $t5
 lw $t1 4($t7)
 lw $t7 0($s0)
 bnez $t7 null6
@@ -174,7 +174,7 @@ la $a0 _str0
 j _error
 bounds5:
 mul $t5 $s2 4
-addu $t5 $t5 $t7
+add $t5 $t5 $t7
 lw $t7 0($s0)
 bnez $t7 null7
 la $a0 _str0
@@ -187,7 +187,7 @@ la $a0 _str0
 j _error
 bounds6:
 mul $t8 $t2 4
-addu $t8 $t8 $t7
+add $t8 $t8 $t7
 lw $t8 4($t8)
 sw $t8 4($t5)
 lw $t8 0($s0)
@@ -202,9 +202,9 @@ la $a0 _str0
 j _error
 bounds7:
 mul $t5 $t2 4
-addu $t5 $t5 $t8
+add $t5 $t5 $t8
 sw $t1 4($t5)
-addu $t5 $s2 1
+add $t5 $s2 1
 slt $t5 $t2 $t5
 beqz $t5 if4_else
 li $t4 0
@@ -226,7 +226,7 @@ la $a0 _str0
 j _error
 bounds8:
 mul $t3 $t2 4
-addu $t3 $t3 $t4
+add $t3 $t3 $t4
 lw $t4 0($s0)
 bnez $t4 null10
 la $a0 _str0
@@ -239,7 +239,7 @@ la $a0 _str0
 j _error
 bounds9:
 mul $t2 $s2 4
-addu $t2 $t2 $t4
+add $t2 $t2 $t4
 lw $t2 4($t2)
 sw $t2 4($t3)
 lw $t2 0($s0)
@@ -254,7 +254,7 @@ la $a0 _str0
 j _error
 bounds10:
 mul $t3 $s2 4
-addu $t3 $t3 $t2
+add $t3 $t3 $t2
 lw $t2 0($s0)
 bnez $t2 null12
 la $a0 _str0
@@ -267,7 +267,7 @@ la $a0 _str0
 j _error
 bounds11:
 mul $t4 $s1 4
-addu $t4 $t4 $t2
+add $t4 $t4 $t2
 lw $t4 4($t4)
 sw $t4 4($t3)
 lw $t4 0($s0)
@@ -282,14 +282,14 @@ la $a0 _str0
 j _error
 bounds12:
 mul $t3 $s1 4
-addu $t3 $t3 $t4
+add $t3 $t3 $t4
 sw $t1 4($t3)
-subu $t3 $s2 1
+sub $t3 $s2 1
 move $a0 $s0
 move $a1 $t0
 move $a2 $t3
 jal QS.Sort
-addu $t3 $s2 1
+add $t3 $s2 1
 move $a0 $s0
 move $a1 $t3
 move $a2 $s1
@@ -330,11 +330,11 @@ la $a0 _str0
 j _error
 bounds13:
 mul $t3 $t1 4
-addu $t3 $t3 $t2
+add $t3 $t3 $t2
 lw $t3 4($t3)
 move $a0 $t3
 jal _print
-addu $t1 $t1 1
+add $t1 $t1 1
 j while4_top
 while4_end:
 li $v0 0
@@ -371,7 +371,7 @@ j _error
 bounds14:
 li $t9 0
 mul $t1 $t9 4
-addu $t1 $t1 $t0
+add $t1 $t1 $t0
 la $t9 20
 sw $t9 4($t1)
 lw $t1 0($s0)
@@ -388,7 +388,7 @@ j _error
 bounds15:
 li $t9 1
 mul $t0 $t9 4
-addu $t0 $t0 $t1
+add $t0 $t0 $t1
 la $t9 7
 sw $t9 4($t0)
 lw $t0 0($s0)
@@ -405,7 +405,7 @@ j _error
 bounds16:
 li $t9 2
 mul $t1 $t9 4
-addu $t1 $t1 $t0
+add $t1 $t1 $t0
 la $t9 12
 sw $t9 4($t1)
 lw $t1 0($s0)
@@ -422,7 +422,7 @@ j _error
 bounds17:
 li $t9 3
 mul $t0 $t9 4
-addu $t0 $t0 $t1
+add $t0 $t0 $t1
 la $t9 18
 sw $t9 4($t0)
 lw $t0 0($s0)
@@ -439,7 +439,7 @@ j _error
 bounds18:
 li $t9 4
 mul $t1 $t9 4
-addu $t1 $t1 $t0
+add $t1 $t1 $t0
 la $t9 2
 sw $t9 4($t1)
 lw $t1 0($s0)
@@ -456,7 +456,7 @@ j _error
 bounds19:
 li $t9 5
 mul $t0 $t9 4
-addu $t0 $t0 $t1
+add $t0 $t0 $t1
 la $t9 11
 sw $t9 4($t0)
 lw $t0 0($s0)
@@ -473,7 +473,7 @@ j _error
 bounds20:
 li $t9 6
 mul $t1 $t9 4
-addu $t1 $t1 $t0
+add $t1 $t1 $t0
 la $t9 6
 sw $t9 4($t1)
 lw $t1 0($s0)
@@ -490,7 +490,7 @@ j _error
 bounds21:
 li $t9 7
 mul $t0 $t9 4
-addu $t0 $t0 $t1
+add $t0 $t0 $t1
 la $t9 9
 sw $t9 4($t0)
 lw $t0 0($s0)
@@ -507,7 +507,7 @@ j _error
 bounds22:
 li $t9 8
 mul $t1 $t9 4
-addu $t1 $t1 $t0
+add $t1 $t1 $t0
 la $t9 19
 sw $t9 4($t1)
 lw $t1 0($s0)
@@ -524,7 +524,7 @@ j _error
 bounds23:
 li $t9 9
 mul $t0 $t9 4
-addu $t0 $t0 $t1
+add $t0 $t0 $t1
 la $t9 5
 sw $t9 4($t0)
 li $v0 0
@@ -542,7 +542,7 @@ subu $sp $sp 8
 sw $ra -4($fp)
 move $t0 $a0
 mul $t1 $t0 4
-addu $t1 $t1 4
+add $t1 $t1 4
 move $a0 $t1
 jal _heapAlloc
 move $t1 $v0
