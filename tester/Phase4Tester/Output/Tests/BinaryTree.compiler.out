@@ -440,7 +440,7 @@ li $t1 0
 j if1_end
 if1_else:
 slt $t2 $t0 $t2
-addi $t2 $t2 1
+addi $t2 $t2 -1
 beqz $t2 if2_else
 li $t1 0
 j if2_end
@@ -690,7 +690,7 @@ lw $t0 28($t0)
 move $a0 $s2
 jalr $t0
 move $t0 $v0
-addi $t0 $t0 1
+addi $t0 $t0 -1
 beqz $t0 ss1_else
 bnez $s2 null37
 la $a0 _str0
@@ -701,7 +701,7 @@ lw $t0 32($t0)
 move $a0 $s2
 jalr $t0
 move $t0 $v0
-addi $t0 $t0 1
+addi $t0 $t0 -1
 j ss1_end
 ss1_else:
 li $t0 0

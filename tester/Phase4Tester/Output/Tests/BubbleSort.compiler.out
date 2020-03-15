@@ -81,7 +81,10 @@ sw $ra -4($fp)
 move $t0 $a0
 lw $t1 8($t0)
 subu $t1 $t1 1
-addi $t2 1 0
+li $t9 1
+addi $t9 $t9 0
+move $t2 $t9
+
 while1_top:
 slt $t3 $t2 $t1
 beqz $t3 while1_end
@@ -97,7 +100,7 @@ la $a0 _str0
 j _error
 null2:
 lw $t6 0($t5)
-(Lt) UNDEFINED
+slt $t6 $t4 $t6
 bnez $t6 bounds1
 la $a0 _str0
 j _error
@@ -111,7 +114,7 @@ la $a0 _str0
 j _error
 null3:
 lw $t4 0($t5)
-(Lt) UNDEFINED
+slt $t4 $t3 $t4
 bnez $t4 bounds2
 la $a0 _str0
 j _error
@@ -128,7 +131,7 @@ la $a0 _str0
 j _error
 null4:
 lw $t5 0($t6)
-(Lt) UNDEFINED
+slt $t5 $t4 $t5
 bnez $t5 bounds3
 la $a0 _str0
 j _error
@@ -142,7 +145,7 @@ la $a0 _str0
 j _error
 null5:
 lw $t7 0($t6)
-(Lt) UNDEFINED
+slt $t7 $t4 $t7
 bnez $t7 bounds4
 la $a0 _str0
 j _error
@@ -155,7 +158,7 @@ la $a0 _str0
 j _error
 null6:
 lw $t4 0($t6)
-(Lt) UNDEFINED
+slt $t4 $t3 $t4
 bnez $t4 bounds5
 la $a0 _str0
 j _error
@@ -170,7 +173,7 @@ la $a0 _str0
 j _error
 null7:
 lw $t7 0($t4)
-(Lt) UNDEFINED
+slt $t7 $t3 $t7
 bnez $t7 bounds6
 la $a0 _str0
 j _error
@@ -211,7 +214,7 @@ la $a0 _str0
 j _error
 null8:
 lw $t3 0($t2)
-(Lt) UNDEFINED
+slt $t3 $t1 $t3
 bnez $t3 bounds7
 la $a0 _str0
 j _error
@@ -250,12 +253,14 @@ la $a0 _str0
 j _error
 null9:
 lw $t1 0($t0)
-(Lt) UNDEFINED
+li $t9 0
+slt $t1 $t9 $t1
 bnez $t1 bounds8
 la $a0 _str0
 j _error
 bounds8:
-mul $t1 0 4
+li $t9 0
+mul $t1 $t9 4
 addu $t1 $t1 $t0
 la $t9 20
 sw $t9 4($t1)
@@ -265,12 +270,14 @@ la $a0 _str0
 j _error
 null10:
 lw $t0 0($t1)
-(Lt) UNDEFINED
+li $t9 1
+slt $t0 $t9 $t0
 bnez $t0 bounds9
 la $a0 _str0
 j _error
 bounds9:
-mul $t0 1 4
+li $t9 1
+mul $t0 $t9 4
 addu $t0 $t0 $t1
 la $t9 7
 sw $t9 4($t0)
@@ -280,12 +287,14 @@ la $a0 _str0
 j _error
 null11:
 lw $t1 0($t0)
-(Lt) UNDEFINED
+li $t9 2
+slt $t1 $t9 $t1
 bnez $t1 bounds10
 la $a0 _str0
 j _error
 bounds10:
-mul $t1 2 4
+li $t9 2
+mul $t1 $t9 4
 addu $t1 $t1 $t0
 la $t9 12
 sw $t9 4($t1)
@@ -295,12 +304,14 @@ la $a0 _str0
 j _error
 null12:
 lw $t0 0($t1)
-(Lt) UNDEFINED
+li $t9 3
+slt $t0 $t9 $t0
 bnez $t0 bounds11
 la $a0 _str0
 j _error
 bounds11:
-mul $t0 3 4
+li $t9 3
+mul $t0 $t9 4
 addu $t0 $t0 $t1
 la $t9 18
 sw $t9 4($t0)
@@ -310,12 +321,14 @@ la $a0 _str0
 j _error
 null13:
 lw $t1 0($t0)
-(Lt) UNDEFINED
+li $t9 4
+slt $t1 $t9 $t1
 bnez $t1 bounds12
 la $a0 _str0
 j _error
 bounds12:
-mul $t1 4 4
+li $t9 4
+mul $t1 $t9 4
 addu $t1 $t1 $t0
 la $t9 2
 sw $t9 4($t1)
@@ -325,12 +338,14 @@ la $a0 _str0
 j _error
 null14:
 lw $t0 0($t1)
-(Lt) UNDEFINED
+li $t9 5
+slt $t0 $t9 $t0
 bnez $t0 bounds13
 la $a0 _str0
 j _error
 bounds13:
-mul $t0 5 4
+li $t9 5
+mul $t0 $t9 4
 addu $t0 $t0 $t1
 la $t9 11
 sw $t9 4($t0)
@@ -340,12 +355,14 @@ la $a0 _str0
 j _error
 null15:
 lw $t1 0($t0)
-(Lt) UNDEFINED
+li $t9 6
+slt $t1 $t9 $t1
 bnez $t1 bounds14
 la $a0 _str0
 j _error
 bounds14:
-mul $t1 6 4
+li $t9 6
+mul $t1 $t9 4
 addu $t1 $t1 $t0
 la $t9 6
 sw $t9 4($t1)
@@ -355,12 +372,14 @@ la $a0 _str0
 j _error
 null16:
 lw $t0 0($t1)
-(Lt) UNDEFINED
+li $t9 7
+slt $t0 $t9 $t0
 bnez $t0 bounds15
 la $a0 _str0
 j _error
 bounds15:
-mul $t0 7 4
+li $t9 7
+mul $t0 $t9 4
 addu $t0 $t0 $t1
 la $t9 9
 sw $t9 4($t0)
@@ -370,12 +389,14 @@ la $a0 _str0
 j _error
 null17:
 lw $t1 0($t0)
-(Lt) UNDEFINED
+li $t9 8
+slt $t1 $t9 $t1
 bnez $t1 bounds16
 la $a0 _str0
 j _error
 bounds16:
-mul $t1 8 4
+li $t9 8
+mul $t1 $t9 4
 addu $t1 $t1 $t0
 la $t9 19
 sw $t9 4($t1)
@@ -385,12 +406,14 @@ la $a0 _str0
 j _error
 null18:
 lw $t0 0($t1)
-(Lt) UNDEFINED
+li $t9 9
+slt $t0 $t9 $t0
 bnez $t0 bounds17
 la $a0 _str0
 j _error
 bounds17:
-mul $t0 9 4
+li $t9 9
+mul $t0 $t9 4
 addu $t0 $t0 $t1
 la $t9 5
 sw $t9 4($t0)
@@ -410,7 +433,7 @@ sw $ra -4($fp)
 move $t0 $a0
 mul $t1 $t0 4
 addu $t1 $t1 4
-li $a0 $t1
+move $a0 $t1
 jal _heapAlloc
 move $t1 $v0
 sw $t0 0($t1)

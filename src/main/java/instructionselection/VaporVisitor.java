@@ -100,24 +100,47 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
 
         switch (c.op.name) {
             case "Add":
-                currLine += "addu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                if (c.args[0] instanceof VOperand.Static && !(c.args[1] instanceof VOperand.Static)) {
+                    currLine += "addi " + c.dest.toString() + " " + c.args[1].toString() + " " + c.args[0].toString();
+                } else if (c.args[0] instanceof VOperand.Static) {
+                    currLine += "li $t9 " + c.args[1].toString() + "\n";
+                    currLine += "addi $t9 $t9 " + c.args[0].toString() + "\n";
+                    currLine += "move " + c.dest.toString() + " $t9\n";
+                } else {
+                    currLine += "addu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                }
                 break;
             case "Sub":
-                if (c.args[0] instanceof  VOperand.Static) {
-                    currLine += "addi " + c.dest.toString() + " " + c.args[1].toString() + " " + c.args[0].toString();
+                if (c.args[0] instanceof  VOperand.Static && !(c.args[1] instanceof VOperand.Static)) {
+                    int value = Integer.parseInt(c.args[0].toString()) * -1;
+                    currLine += "addi " + c.dest.toString() + " " + c.args[1].toString() + " " + value;
+                } else if (c.args[0] instanceof VOperand.Static) {
+                    currLine += "li $t9 " + c.args[1].toString() + "\n";
+                    int value = Integer.parseInt(c.args[0].toString()) * -1;
+                    currLine += "addi $t9 $t9 " + value + "\n";
+                    currLine += "move " + c.dest.toString() + " $t9\n";
                 } else {
                     currLine += "subu " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 }
                 break;
             case "LtS":
+            case "Lt":
                 if (c.args[1] instanceof VOperand.Static) {
                     currLine += "slti " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                } else if (c.args[0] instanceof VOperand.Static){
+                    currLine += "li $t9 " + c.args[0].toString() + "\n";
+                    currLine += "slt " + c.dest.toString() + " $t9 " + c.args[1].toString();
                 } else {
                     currLine += "slt " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
                 }
                 break;
             case "MulS":
-                currLine += "mul " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                if (c.args[0] instanceof VOperand.Static) {
+                    currLine += "li $t9 " + c.args[0].toString() + "\n";
+                    currLine += "mul " + c.dest.toString() + " $t9 " + c.args[1].toString();
+                } else {
+                    currLine += "mul " + c.dest.toString() + " " + c.args[0].toString() + " " + c.args[1].toString();
+                }
                 break;
             case "PrintIntS":
                 if (c.args[0] instanceof VVarRef) {
@@ -128,7 +151,11 @@ public class VaporVisitor <E extends Throwable> extends Visitor<E> {
                 currLine += "jal _print";
                 break;
             case "HeapAllocZ":
-                currLine += "li $a0 " + c.args[0].toString() + "\n";
+                if (c.args[0] instanceof VOperand.Static) {
+                    currLine += "li $a0 " + c.args[0].toString() + "\n";
+                } else {
+                    currLine += "move $a0 " + c.args[0].toString() + "\n";
+                }
                 currLine += "jal _heapAlloc\n";
                 currLine += "move " + c.dest.toString() + " $v0";
                 break;

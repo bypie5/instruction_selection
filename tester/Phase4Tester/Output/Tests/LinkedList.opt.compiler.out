@@ -294,14 +294,17 @@ move $t0 $a0
 move $s0 $a1
 move $s1 $t0
 li $s2 0
-addi $s3 1 0
+li $t9 1
+addi $t9 $t9 0
+move $s3 $t9
+
 move $s4 $t0
 move $s5 $t0
 lw $s6 8($t0)
 lw $s7 0($t0)
 while1_top:
 bnez $s6 ss1_else
-addi $t0 $s2 1
+addi $t0 $s2 -1
 j ss1_end
 ss1_else:
 li $t0 0
@@ -328,7 +331,10 @@ jal List.GetNext
 move $s1 $v0
 j if9_end
 if9_else:
-addi $t0 555 0
+li $t9 555
+addi $t9 $t9 0
+move $t0 $t9
+
 move $a0 $t0
 jal _print
 bnez $s5 null8
@@ -345,7 +351,10 @@ move $t0 $v0
 move $a0 $s5
 move $a1 $t0
 jal List.SetNext
-addi $t0 555 0
+li $t9 555
+addi $t9 $t9 0
+move $t0 $t9
+
 move $a0 $t0
 jal _print
 if9_end:
@@ -412,7 +421,7 @@ move $s2 $t0
 lw $s3 8($t0)
 lw $t0 0($t0)
 while2_top:
-addi $t1 $s3 1
+addi $t1 $s3 -1
 beqz $t1 while2_end
 bnez $s0 null13
 la $a0 _str0
@@ -515,7 +524,7 @@ move $s0 $t0
 lw $s1 8($t0)
 lw $t0 0($t0)
 while3_top:
-addi $t1 $s1 1
+addi $t1 $s1 -1
 beqz $t1 while3_end
 bnez $t0 null17
 la $a0 _str0

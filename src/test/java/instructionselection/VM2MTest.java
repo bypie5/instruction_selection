@@ -78,4 +78,32 @@ public class VM2MTest {
         assertEquals("ALWAYS FAIL", outContent.toString());
     }
 
+    @Test
+    public void bubbleSortTest() {
+        try {
+            File inputFile = new File("./tester/Phase4Tester/SelfTestCases/BubbleSort.vaporm");
+            System.setIn(new FileInputStream(inputFile));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            fail();
+        }
+
+        VM2M.instructionSelection();
+        assertEquals("ALWAYS FAIL", outContent.toString());
+    }
+
+    @Test
+    public void linearSearchTest() {
+        try {
+            File inputFile = new File("./tester/Phase4Tester/SelfTestCases/LinearSearch.vaporm");
+            System.setIn(new FileInputStream(inputFile));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            fail();
+        }
+
+        VM2M.instructionSelection();
+        assertEquals("ALWAYS FAIL", outContent.toString());
+    }
+
 }

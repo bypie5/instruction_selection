@@ -1,7 +1,16 @@
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 117 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 156 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 208 column 9: "2": operand is of incorrect type
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 216 column 1: "(" is not a recognized operator
-Error in /Users/brandonyi/Documents/School/CS179E/instruction_selection/tester/Phase4Tester/./Output/Tests/LinearSearch.compiler.out line 245 column 8: "$t1": operand is of incorrect type
+10
+11
+12
+13
+14
+15
+16
+17
+18
+9999
+0
+1
+1
+0
+55
 
-Processing terminated due to errors.
